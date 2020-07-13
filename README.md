@@ -1,8 +1,8 @@
 # Butter MAS Javascript API
 HTTP client javascript API for Butter MAS platform.
 
-[![licence](https://img.shields.io/github/license/bennymeg/Butter.MAS.PythonAPI.svg)](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/LICENSE)
-[![](https://img.shields.io/pypi/v/butter.mas-api.svg)](https://pypi.org/project/butter.mas-api/)
+[![licence](https://img.shields.io/github/license/bennymeg/Butter.MAS.JavascriptAPI.svg)](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
+![npm](https://img.shields.io/npm/v/@butter-robotics/mas-api)
 
 ___
 🚧**NOTE:** this repository is still a work in progress.
@@ -15,16 +15,15 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 ```
-npm install @butter/mas-api
+npm install @butter-robotics/mas-api
 ```
 
 ### Usage
 
 ```typescript
-import { HttpClient } from '@butter/mas-api';
+import { HttpClient } from '@butter-robotics/mas-api';
 
-const butterHttpClient = new HttpClient('192.168.0.111')  # use you robot ip here
-
+const butterHttpClient = new HttpClient('192.168.0.111')            // use you robot ip here
 const result = await butterHttpClient.playAnimation('welcome');
 
 console.log(result.json());
@@ -34,7 +33,7 @@ console.log(result.json());
 
 #### Linting
 
-Please use TsLint (Default linter on VS Code) to lint your code before submitting a PR.
+Please use TsLint to lint your code before submitting a PR.
 
 #### Tests
 
