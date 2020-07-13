@@ -1,0 +1,36 @@
+{
+  "name": "mas-javascript-api",
+  "version": "1.0.0",
+  "description": "Javascript API for Butter MAS platform",
+  "main": "butter/mas/api.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennymeg/MAS-JS-API.git"
+  },
+  "keywords": [
+    "Butter",
+    "MAS",
+    "Javascript",
+    "Typescript",
+    "API"
+  ],
+  "author": "Benny Megidish",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bennymeg/MAS-JS-API/issues"
+  },
+  "homepage": "https://github.com/bennymeg/MAS-JS-API#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  }
+}
