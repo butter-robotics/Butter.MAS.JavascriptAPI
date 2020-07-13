@@ -15,9 +15,9 @@ export class Client {
      * @memberof Client
      */
     constructor(ip: string, port: number=5555, protocol: string='http') {
-        this.ip = ip
-        this.port = port
-        this.protocol = protocol
+        this.ip = ip;
+        this.port = port;
+        this.protocol = protocol;
     }
 
     /**
@@ -27,9 +27,9 @@ export class Client {
      * @memberof Client
      */
     getAvailableHandlers() {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('list').build()
+        const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('list').build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -41,14 +41,14 @@ export class Client {
      * @memberof Client
      */
     getAvailableAnimations(reload: boolean=false) {
-        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('animate')
+        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('animate');
 
         if (reload)
-            builder.addParameter('reload')
+            builder.addParameter('reload');
 
-        const packet = builder.addParameter('list').build()
+        const packet = builder.addParameter('list').build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -60,14 +60,14 @@ export class Client {
      * @memberof Client
      */
     getAvailableSounds(reload: boolean=false) {
-        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('audio')
+        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('audio');
 
         if (reload)
-            builder.addParameter('reload')
+            builder.addParameter('reload');
 
-        const packet = builder.addParameter('list').build()
+        const packet = builder.addParameter('list').build();
 
-        return packet.send()
+        return packet.send();
     }
     
 
@@ -85,9 +85,9 @@ export class Client {
                     .addArguments('get', motorName)
                     .addParameter('list')
                     .addKeyValuePair('readableOnly', readableOnly)
-                    .build()
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -103,9 +103,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
-                    .build()
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -122,9 +122,9 @@ export class Client {
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
                     .addParameter('range')
-                    .build()
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -141,9 +141,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('set', motorName, registerName, value)
-                    .build()        
+                    .build(); 
 
-        return packet.send()
+        return packet.send();
             }
 
 
@@ -158,10 +158,14 @@ export class Client {
      * @memberof Client
      */
     moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number) {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, position)
-                    .addKeyValuePair('velocity', velocity).addKeyValuePair('acceleration', acceleration).build()        
+        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+                    .addCommand('move')
+                    .addArguments(motorName, position)
+                    .addKeyValuePair('velocity', velocity)
+                    .addKeyValuePair('acceleration', acceleration)
+                    .build();
 
-        return packet.send()
+        return packet.send();
             }
 
     
@@ -179,10 +183,10 @@ export class Client {
                     .addCommand('move')
                     .addArguments(motorName, position)
                     .addKeyValuePair('duration', duration)
-                    .build()        
+                    .build();      
 
-        return packet.send()
-            }
+        return packet.send();
+    }
 
     
     /**
@@ -201,10 +205,10 @@ export class Client {
                     .addArguments(motorName, direction_code)
                     .addKeyValuePair('velocity', velocity)
                     .addParameter('continuously')
-                    .build()        
+                    .build();       
 
-        return packet.send()
-            }
+        return packet.send();
+    }
 
     
     /**
@@ -222,8 +226,8 @@ export class Client {
     //     const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
     //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
     //                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) 
-    //                 .addKeyValuePair('interpolator', interpolator).build()       
-    //     return packet.send()
+    //                 .addKeyValuePair('interpolator', interpolator).build();       
+    //     return packet.send();
     // }
 
 
@@ -238,10 +242,10 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
-                    .build()        
+                    .build();
 
-        return packet.send()
-            }
+        return packet.send();
+    }
 
 
     /**
@@ -254,9 +258,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('pause')
-                    .build()        
+                    .build();        
 
-        return packet.send()
+        return packet.send();
     }
 
     /**
@@ -269,9 +273,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('resume')
-                    .build()        
+                    .build();  
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -285,9 +289,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('stop')
-                    .build()        
+                    .build();
 
-        return packet.send() 
+        return packet.send();
     }
 
 
@@ -302,9 +306,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addArgument(fileName)
-                    .build()        
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
         
@@ -318,9 +322,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('pause')
-                    .build()        
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -334,9 +338,9 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('resume')
-                    .build()        
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 
 
@@ -350,8 +354,8 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('stop')
-                    .build()        
+                    .build();
 
-        return packet.send()
+        return packet.send();
     }
 }

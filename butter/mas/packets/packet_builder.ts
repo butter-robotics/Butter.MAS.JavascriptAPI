@@ -25,11 +25,11 @@ export class PacketBuilder {
      * @memberof PacketBuilder
      */
     constructor(ip: string, port: number, protocol: string="http") {
-        this.ip = ip
-        this.port = port
+        this.ip = ip;
+        this.port = port;
 
-        const packetFactory = new PacketFactory()
-        this.packet = packetFactory.getPacketClass(protocol)
+        const packetFactory = new PacketFactory();
+        this.packet = packetFactory.getPacketClass(protocol);
 
         this.cmd = null;
         this.args = [];
@@ -46,9 +46,9 @@ export class PacketBuilder {
      * @memberof PacketBuilder
      */
     addCommand(command: string) {
-        this.cmd = String(command)
+        this.cmd = String(command);
 
-        return this
+        return this;
     }
 
 
@@ -62,7 +62,7 @@ export class PacketBuilder {
     addArgument(argument: string | number | boolean) {
         this.args.push(String(argument));
 
-        return this
+        return this;
     }
     
 
@@ -81,7 +81,7 @@ export class PacketBuilder {
             });
         }
 
-        return this
+        return this;
     }
 
 
@@ -95,7 +95,7 @@ export class PacketBuilder {
     addParameter(parameter: string) {
         this.params.push(this._formatParameter(String(parameter)));
 
-        return this
+        return this;
     }
 
 
@@ -113,7 +113,7 @@ export class PacketBuilder {
             });
         }
 
-        return this
+        return this;
     }
 
 
@@ -130,7 +130,7 @@ export class PacketBuilder {
             this.keys.set(key, String(value));
         }
 
-        return this
+        return this;
     }
 
 
@@ -153,7 +153,7 @@ export class PacketBuilder {
             }
         }
 
-        return normalizedParameter
+        return normalizedParameter;
     }
 
 

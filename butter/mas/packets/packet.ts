@@ -29,11 +29,10 @@ export class Packet {
      * @memberof Packet
      */
     constructor(ip: string, port: number, query: string) {
-        this.ip = ip
-        this.port = port
-        this.query = query
+        this.ip = ip;
+        this.port = port;
+        this.query = query;
     }
-
 
 
     /**
@@ -62,9 +61,9 @@ export class Packet {
             data: content,
             status: 200,
             statusText: 'OK'
-        }
+        };
 
-        return response
+        return response;
     }
 
 
@@ -83,9 +82,9 @@ export class Packet {
             data: `{ "exception": "Request resolved with an ${errorType} error" }`,
             status: 400,
             statusText: 'Failed'
-        }
+        };
 
-        return response
+        return response;
     }
 
 

@@ -1,4 +1,4 @@
-import axios from '../../../node_modules/axios/index';
+import axios from 'axios';
 import { Packet, Response } from './packet'
 
 
@@ -41,7 +41,7 @@ export class UdpPacket extends Packet {
             response = this.generateEmptyResponse();
         }
 
-        return response
+        return response;
     }
 
     equals(other: any) {
