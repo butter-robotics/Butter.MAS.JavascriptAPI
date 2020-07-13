@@ -1,7 +1,7 @@
 # Butter MAS Javascript API
 HTTP client javascript API for Butter MAS platform.
 
-[![licence](https://img.shields.io/github/license/bennymeg/Butter.MAS.JavascriptAPI.svg)](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
+[![licence](https://img.shields.io/github/license/butter-robotics/Butter.MAS.JavascriptAPI.svg)](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 ![npm](https://img.shields.io/npm/v/@butter-robotics/mas-api)
 
 ___
@@ -43,25 +43,25 @@ npm run test
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://bennymeg.github.io/Butter.MAS.JavascriptAPI/),
-<!-- (https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/docs/API.md), -->
-- 🖋  [Licence](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
-<!-- - 👩🏼‍🏫 [Examples](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/docs/examples),   -->
+- 👨🏼‍💻 [API](https://butter-robotics.github.io/Butter.MAS.JavascriptAPI/),
+<!-- (https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/API.md), -->
+- 🖋  [Licence](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
+<!-- - 👩🏼‍🏫 [Examples](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/examples),   -->
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/tags). 
 
 ## Authors
 
 **Benny Megidish**
 
-_See also the list of [contributors](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/contributors) who participated in this project._
+_See also the list of [contributors](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/contributors) who participated in this project._
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE.md](https://github.com/bennymeg/Butter.MAS.JavascriptAPI/blob/master/LICENSE) file for details
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE) file for details
