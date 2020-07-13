@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES2015",
+        "typeRoots": ["node_modules/@types"],
+        "declaration": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "moduleResolution": "Node",
+        "preserveConstEnums": true,
+        "outDir": "build",
+        "sourceMap": true,
+        "lib": ["es2015", "DOM"],
+        "baseUrl": ".",
+        "rootDir": "."
+    },
+    "typedocOptions": {
+        "mode": "modules",
+        "out": "docs",
+        "name": "Butter MAS Javascript API Documentation"
+    },
+    "include": [
+        "butter/mas/**/*"
+    ],
+    "exclude": [
+        "build",
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

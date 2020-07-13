@@ -1,0 +1,51 @@
+{
+  "name": "mas-javascript-api",
+  "version": "1.0.0",
+  "description": "Javascript API for Butter MAS platform",
+  "author": "Benny Megidish",
+  "license": "Apache-2.0",
+  "private": false,
+  "main": "build/api.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --maxWorkers=1 .*.spec.js",
+    "compile": "tsc",
+    "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
+    "publish": "cd build && npm publish",
+    "permission": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/make_build_public.ps1",
+    "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence",
+    "copy:json": "xcopy \"*.json\" \"build/\" /F /Y",
+    "copy:readme": "xcopy \"README.md\" \"build/\" /F /Y",
+    "copy:licence": "xcopy \"LICENSE\" \"build/\" /F /Y && xcopy \"NOTICE\" \"build/\" /F /Y",
+    "clear:all": "npm run clear:ts && npm run clear:json && npm run clear:readme && npm run clear:licence",
+    "clear:ts": "rmdir \".\\build\\butter\\\" /q /s",
+    "clear:json": "del \".\\build\\*.json\"",
+    "clear:readme": "del \".\\build\\README.md\"",
+    "clear:licence": "del \".\\build\\LICENSE\" && del \".\\build\\NOTICE\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennymeg/MAS-JS-API.git"
+  },
+  "keywords": [
+    "Butter",
+    "MAS",
+    "Javascript",
+    "Typescript",
+    "API"
+  ],
+  "bugs": {
+    "url": "https://github.com/bennymeg/MAS-JS-API/issues"
+  },
+  "homepage": "https://github.com/bennymeg/MAS-JS-API#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.6"
+  }
+}
