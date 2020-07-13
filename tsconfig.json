@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "CommonJS",
         "target": "ES2015",
         "typeRoots": ["node_modules/@types"],
+        "declaration": true,
         "noImplicitAny": true,
         "removeComments": true,
+        "moduleResolution": "Node",
         "preserveConstEnums": true,
-        "outFile": "build/api.js",
+        "outDir": "build",
         "sourceMap": true,
         "lib": ["es2015", "DOM"],
         "baseUrl": ".",
@@ -21,6 +23,7 @@
         "butter/mas/**/*"
     ],
     "exclude": [
+        "build",
         "node_modules",
         "**/*.spec.ts"
     ]
