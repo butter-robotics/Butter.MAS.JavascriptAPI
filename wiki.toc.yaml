@@ -11,8 +11,10 @@
     data: wiki/classes/_butter_mas_clients_http_client_.httpclient.md
   - label: TCP Client
     data: wiki/classes/_butter_mas_clients_tcp_client_.tcpclient.md
+    disabled: true
   - label: UDP Client
     data: wiki/classes/_butter_mas_clients_udp_client_.udpclient.md
+    disabled: true
   - label: Client
     data: wiki/classes/_butter_mas_clients_client_.client.md
 - label: Internal API
@@ -25,7 +27,9 @@
     data: wiki/classes/_butter_mas_packets_http_packet_.http_packet.md
   - label: TCP Packet
     data: wiki/classes/_butter_mas_packets_tcp_packet_.tcp_packet.md
+    disabled: true
   - label: UDP Packet
     data: wiki/classes/_butter_mas_packets_udp_packet_.udp_packet.md
+    disabled: true
   - label: Packet
     data: wiki/classes/_butter_mas_packets_packet_.packet.md
