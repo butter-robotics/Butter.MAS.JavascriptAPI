@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest --maxWorkers=1 .*.spec.js",
-    "doc": "typedoc",
+    "doc": "typedoc && typedoc --plugin typedoc-plugin-markdown --out wiki --hideBreadcrumbs",
     "compile": "tsc",
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
     "publish": "cd build && npm publish",
