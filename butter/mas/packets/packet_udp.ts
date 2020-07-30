@@ -27,11 +27,11 @@ export class UdpPacket extends Packet {
     /**
      * Send packet
      *
-     * @param {number} [timeout=5] packet timeout (optional)
+     * @param {number} [timeout=20] packet timeout (optional)
      * @returns response containing the response
      * @memberof UdpPacket
      */
-    async send(timeout: number=5): Promise<Response> {
+    async send(timeout: number=20): Promise<Response> {
         let response: Response;
 
         try {
