@@ -187,7 +187,7 @@ export class PacketBuilder {
         }
 
         let uri = ['cmd', 'json'].join('/');
-        uri = `${uri}${query.replace(/&+$/, "")}`;
+        uri = `${uri}/${query.replace(/&+$/, "")}`;
 
         return new this.packet(this.ip, this.port, uri);
     }  
