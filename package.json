@@ -1,6 +1,6 @@
 {
   "name": "@butter-robotics/mas-javascript-api",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
