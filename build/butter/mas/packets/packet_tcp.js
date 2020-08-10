@@ -16,7 +16,7 @@ class TcpPacket extends packet_1.Packet {
     constructor(ip, port, query) {
         super(ip, port, query);
     }
-    send(timeout = 5) {
+    send(timeout = 40) {
         return __awaiter(this, void 0, void 0, function* () {
             let response;
             try {

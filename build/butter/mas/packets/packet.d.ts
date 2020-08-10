@@ -13,6 +13,6 @@ export declare class Packet {
     constructor(ip: string, port: number, query: string);
     send(timeout?: number): void;
     protected generateResponse(content: string): Response;
-    protected generateEmptyResponse(errorType?: string): Response;
+    protected generateEmptyResponse(error?: any, errorType?: string): Response;
     equals(other: any): boolean;
 }

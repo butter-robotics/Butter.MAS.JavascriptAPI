@@ -19,13 +19,30 @@ class Packet {
         };
         return response;
     }
-    generateEmptyResponse(errorType = 'unknown') {
+    generateEmptyResponse(error = null, errorType = 'unknown') {
         let response;
         response = {
             data: `{ "exception": "Request resolved with an ${errorType} error" }`,
             status: 400,
             statusText: 'Failed'
         };
+        if (error) {
+            if (error.response) {
+                response = {
+                    data: error.response.data,
+                    status: error.response.status,
+                    statusText: 'Failed',
+                    headers: error.response.headers
+                };
+            }
+            else if (error.request) {
+                response.request = error.request;
+            }
+            else {
+                response.data = `{ "exception": "Request resolved with an ${error.message} error" }`;
+            }
+            response.config = error.config;
+        }
         return response;
     }
     equals(other) {

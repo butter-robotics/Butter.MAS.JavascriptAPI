@@ -16,7 +16,7 @@ class HttpPacket extends packet_1.Packet {
     constructor(ip, port, query) {
         super(ip, port, query);
     }
-    send(timeout = 5) {
+    send(timeout = 40) {
         return __awaiter(this, void 0, void 0, function* () {
             let response;
             try {
@@ -24,7 +24,7 @@ class HttpPacket extends packet_1.Packet {
             }
             catch (error) {
                 console.error(`Warning: request failed.\n${error}\n`);
-                response = this.generateEmptyResponse();
+                response = this.generateEmptyResponse(error);
             }
             return response;
         });
