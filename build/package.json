@@ -1,20 +1,24 @@
 {
-  "name": "mas-javascript-api",
-  "version": "1.0.0",
+  "name": "@butter-robotics/mas-javascript-api",
+  "version": "0.12.3",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
   "private": false,
-  "main": "build/api.js",
+  "main": "butter/mas/api.js",
   "directories": {
     "doc": "docs",
     "test": "tests"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest --maxWorkers=1 .*.spec.js",
+    "doc": "typedoc && typedoc --plugin typedoc-plugin-markdown --out wiki --hideBreadcrumbs",
     "compile": "tsc",
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
-    "publish": "cd build && npm publish",
+    "publish": "cd build && npm publish --scope @butter-robotics",
     "permission": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/make_build_public.ps1",
     "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence",
     "copy:json": "xcopy \"*.json\" \"build/\" /F /Y",
@@ -45,6 +49,7 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
+    "jest": "^26.1.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.6"
   }

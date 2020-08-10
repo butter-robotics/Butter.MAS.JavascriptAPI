@@ -21,12 +21,11 @@ npm install @butter-robotics/mas-api
 ### Usage
 
 ```typescript
-import { HttpClient } from '@butter-robotics/mas-api';
+import { HttpClient } from '@butter-robotics/mas-javascript-api';
 
 const butterHttpClient = new HttpClient('192.168.0.111')            // use you robot ip here
-const result = await butterHttpClient.playAnimation('welcome');
 
-console.log(result.json());
+butterHttpClient.playAnimation('half').then(response => console.log(response.data));
 ```
 
 ### Coding style tests
