@@ -38,7 +38,7 @@ Represents a http data packet
 
 *Overrides [Packet](_butter_mas_packets_packet_.packet.md).[constructor](_butter_mas_packets_packet_.packet.md#constructor)*
 
-*Defined in [butter/mas/packets/packet_http.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet_http.ts#L12)*
+*Defined in [butter/mas/packets/packet_http.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet_http.ts#L12)*
 
 Creates an instance of HttpPacket.
 
@@ -62,7 +62,7 @@ Name | Type | Description |
 
 *Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[ip](_butter_mas_packets_packet_.packet.md#ip)*
 
-*Defined in [butter/mas/packets/packet.ts:19](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet.ts#L19)*
+*Defined in [butter/mas/packets/packet.ts:19](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet.ts#L19)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[port](_butter_mas_packets_packet_.packet.md#port)*
 
-*Defined in [butter/mas/packets/packet.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet.ts#L20)*
+*Defined in [butter/mas/packets/packet.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet.ts#L20)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[query](_butter_mas_packets_packet_.packet.md#query)*
 
-*Defined in [butter/mas/packets/packet.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet.ts#L21)*
+*Defined in [butter/mas/packets/packet.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet.ts#L21)*
 
 ## Methods
 
@@ -92,7 +92,7 @@ ___
 
 *Overrides [Packet](_butter_mas_packets_packet_.packet.md).[equals](_butter_mas_packets_packet_.packet.md#equals)*
 
-*Defined in [butter/mas/packets/packet_http.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet_http.ts#L47)*
+*Defined in [butter/mas/packets/packet_http.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet_http.ts#L47)*
 
 **Parameters:**
 
@@ -110,7 +110,7 @@ ___
 
 *Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[generateEmptyResponse](_butter_mas_packets_packet_.packet.md#protected-generateemptyresponse)*
 
-*Defined in [butter/mas/packets/packet.ts:78](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet.ts#L78)*
+*Defined in [butter/mas/packets/packet.ts:78](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet.ts#L78)*
 
 Generates empty response packet
 
@@ -135,7 +135,7 @@ ___
 
 *Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[generateResponse](_butter_mas_packets_packet_.packet.md#protected-generateresponse)*
 
-*Defined in [butter/mas/packets/packet.ts:57](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet.ts#L57)*
+*Defined in [butter/mas/packets/packet.ts:57](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet.ts#L57)*
 
 **`memberof`** Packet
 
@@ -157,7 +157,7 @@ ___
 
 *Overrides [Packet](_butter_mas_packets_packet_.packet.md).[send](_butter_mas_packets_packet_.packet.md#send)*
 
-*Defined in [butter/mas/packets/packet_http.ts:34](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/7e6b18f/butter/mas/packets/packet_http.ts#L34)*
+*Defined in [butter/mas/packets/packet_http.ts:34](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/9120d4c/butter/mas/packets/packet_http.ts#L34)*
 
 Send packet
 

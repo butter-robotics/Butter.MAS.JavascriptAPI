@@ -5,7 +5,7 @@
 HTTP client javascript API for Butter MAS platform.
 
 [![licence](https://img.shields.io/github/license/butter-robotics/Butter.MAS.JavascriptAPI.svg)](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
-![npm](https://img.shields.io/npm/v/@butter-robotics/mas-api)
+![npm](https://img.shields.io/npm/v/@butter-robotics/mas-javascript-api)
 
 ___
 🚧**NOTE:** this repository is still a work in progress.
@@ -15,10 +15,10 @@ ___
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Installing
+### Installation
 
-```
-npm install @butter-robotics/mas-api
+```bash
+npm install @butter-robotics/mas-javascript-api
 ```
 
 ### Usage
@@ -26,22 +26,9 @@ npm install @butter-robotics/mas-api
 ```typescript
 import { HttpClient } from '@butter-robotics/mas-javascript-api';
 
-const butterHttpClient = new HttpClient('192.168.0.111')            // use you robot ip here
+const butterHttpClient = new HttpClient('192.168.0.111');  // use you robot ip here
 
-butterHttpClient.playAnimation('half').then(response => console.log(response.data));
-```
-
-### Coding style tests
-
-#### Linting
-
-Please use TsLint to lint your code before submitting a PR.
-
-#### Tests
-
-Please test your code before submitting a PR.
-```
-npm run test
+butterHttpClient.playAnimation('jump').then(response => console.log(response.data));
 ```
 
 ## Documentation
@@ -53,6 +40,22 @@ npm run test
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+### Coding style & tests
+
+#### Linting
+
+Please lint your contribution before submitting a PR.
+```
+npm run test
+```
+
+#### Tests
+
+Please test your contribution before submitting a PR.
+```
+npm run test
+```
 
 ## Versioning
 

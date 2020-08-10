@@ -6,7 +6,7 @@ Client Factory is a factory class responsible for creating new clients.
 In order to use the factory, we will need to import it first:
 
 ```typescript
-import { ClientFactory } from '@butter-robotics/mas-api';
+import { ClientFactory } from '@butter-robotics/mas-javascript-api';
 
 const butterClientFactory = new ClientFactory();
 ```
@@ -20,19 +20,19 @@ All clients extends the Client class.
 Creating new HTTP client:
 
 ```typescript
-const butterHttpClient = butterClientFactory.getClient('192.168.0.100', 5555, 'http');  # use you robot ip here
+const butterHttpClient = butterClientFactory.getClient('192.168.0.100', 5555, 'http');  // use you robot ip here
 ```
 
 <!-- Creating new TCP client:
 
 ```typescript
-const butterTcpClient = butterClientFactory.getClient('192.168.0.100', 5050, 'tcp');    # use you robot ip here
+const butterTcpClient = butterClientFactory.getClient('192.168.0.100', 5050, 'tcp');    // use you robot ip here
 ```
 
 Creating new UDP client:
 
 ```typescript
-const butterUdpClient = butterClientFactory.getClient('192.168.0.100', 5000, 'udp');    # use you robot ip here
+const butterUdpClient = butterClientFactory.getClient('192.168.0.100', 5000, 'udp');    // use you robot ip here
 ``` -->
 
 The IP address should be the same as the current IP address of the robot on your local network.
@@ -53,5 +53,5 @@ Each command we send will return (no matter what protocol we use) an Response ob
 We can parse the response using the built in json method like that:
 
 ```typescript
-console.log(result.json())
+console.log(result.data)
 ```
