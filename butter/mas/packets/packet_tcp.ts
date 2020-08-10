@@ -27,11 +27,11 @@ export class TcpPacket extends Packet {
     /**
      * Send packet
      *
-     * @param {number} [timeout=20] packet timeout (optional)
+     * @param {number} [timeout=40] packet timeout (optional)
      * @returns response containing the response
      * @memberof TcpPacket
      */
-    async send(timeout: number=20): Promise<Response> {
+    async send(timeout: number=40): Promise<Response> {
         let response: Response;
 
         try {
