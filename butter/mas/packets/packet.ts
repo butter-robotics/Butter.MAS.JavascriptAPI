@@ -75,7 +75,7 @@ export class Packet {
      * @returns error response
      * @memberof Packet
      */
-    protected generateEmptyResponse(errorType: string='unknown') {
+    protected generateEmptyResponse(error: any=null, errorType: string='unknown') {
         let response: Response;
 
         response = {
@@ -83,6 +83,30 @@ export class Packet {
             status: 400,
             statusText: 'Failed'
         };
+
+        if (error) {
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                response = {
+                    data: error.response.data,
+                    status: error.response.status,
+                    statusText: 'Failed',
+                    headers: error.response.headers
+                };
+            } else if (error.request) {
+                // The request was made but no response was received
+                // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+                // http.ClientRequest in node.js
+                response.request = error.request;
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                response.data = `{ "exception": "Request resolved with an ${error.message} error" }`;
+            }
+
+            response.config = error.config;
+        }
+
 
         return response;
     }
