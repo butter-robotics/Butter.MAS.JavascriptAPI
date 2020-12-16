@@ -1,2 +1,2 @@
-export const __version__ = '0.12.1'
-export const app_name = 'butter.mas-api'
+export const __version__ = '0.12.6'
+export const app_name = '@butter-robotics/mas-javascript-api'

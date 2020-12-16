@@ -44,7 +44,7 @@ Please read [CONTRIBUTING.md](https://github.com/butter-robotics/Butter.MAS.Java
 
 Please lint your contribution before submitting a PR.
 ```
-npm run test
+npm run lint
 ```
 
 #### Tests

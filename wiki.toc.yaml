@@ -8,28 +8,28 @@
   - label: Client Factory
     data: wiki/classes/_butter_mas_clients_client_factory_.clientfactory.md
   - label: HTTP Client
-    data: wiki/classes/_butter_mas_clients_http_client_.httpclient.md
+    data: wiki/classes/_butter_mas_clients_client_http_.httpclient.md
   - label: TCP Client
-    data: wiki/classes/_butter_mas_clients_tcp_client_.tcpclient.md
+    data: wiki/classes/_butter_mas_clients_client_tcp_.tcpclient.md
     disabled: true
   - label: UDP Client
-    data: wiki/classes/_butter_mas_clients_udp_client_.udpclient.md
+    data: wiki/classes/_butter_mas_clients_client_udp_.udpclient.md
     disabled: true
   - label: Client
     data: wiki/classes/_butter_mas_clients_client_.client.md
 - label: Internal API
   items:
   - label: Packet Builder
-    data: wiki/classes/_butter_mas_packets_packet_builder_.packet_builder.md
+    data: wiki/classes/_butter_mas_packets_packet_builder_.packetbuilder.md
   - label: Packet Factory
-    data: wiki/classes/_butter_mas_packets_packet_factory_.packet_factory.md
+    data: wiki/classes/_butter_mas_packets_packet_factory_.packetfactory.md
   - label: HTTP Packet
-    data: wiki/classes/_butter_mas_packets_http_packet_.http_packet.md
+    data: wiki/classes/_butter_mas_packets_packet_http_.httppacket.md
   - label: TCP Packet
-    data: wiki/classes/_butter_mas_packets_tcp_packet_.tcp_packet.md
+    data: wiki/classes/_butter_mas_packets_packet_tcp_.tcppacket.md
     disabled: true
   - label: UDP Packet
-    data: wiki/classes/_butter_mas_packets_udp_packet_.udp_packet.md
+    data: wiki/classes/_butter_mas_packets_packet_udp_.udppacket.md
     disabled: true
   - label: Packet
     data: wiki/classes/_butter_mas_packets_packet_.packet.md
