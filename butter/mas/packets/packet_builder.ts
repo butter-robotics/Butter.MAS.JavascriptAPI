@@ -4,7 +4,6 @@ import { PacketFactory } from './packet_factory';
 /**
  * Builds a command packet using the builder design pattern
  *
- * @export
  * @class PacketBuilder
  */
 export class PacketBuilder {
@@ -139,7 +138,7 @@ export class PacketBuilder {
      *
      * @private
      * @param {string} parameter
-     * @returns formated parameter
+     * @returns formatted parameter
      * @memberof PacketBuilder
      */
     private _formatParameter(parameter: string) {

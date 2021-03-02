@@ -148,7 +148,7 @@ export class Client {
 
 
     /**
-     * Move motor to a certian position (relative to the motor's zero position)
+     * Move motor to a certain position (relative to the motor's zero position)
      *
      * @param {string} motorName motor name (as configured on the configurator)
      * @param {number} position motor final position (in radians)
@@ -170,7 +170,7 @@ export class Client {
 
     
     /**
-     * Move motor to a certian position (relative to the motor's zero position) in fixed duration
+     * Move motor to a certain position (relative to the motor's zero position) in fixed duration
      *
      * @param {string} motorName motor name (as configured on the configurator)
      * @param {number} position motor final position (in radians)
@@ -190,7 +190,7 @@ export class Client {
 
     
     /**
-     * Move motor to a certian direction (relative to the motor's current position)
+     * Move motor to a certain direction (relative to the motor's current position)
      *
      * @param {string} motorName  motor name (as configured on the configurator)
      * @param {string} direction motor movement direction (left, right, stop)
@@ -212,7 +212,7 @@ export class Client {
 
     
     /**
-     * Move motor a certian amount of steps (relative to the motor's current position)
+     * Move motor a certain amount of steps (relative to the motor's current position)
      *
      * @param {string} motorName motor name (as configured on the configurator)
      * @param {string} direction motor movement direction (left, right, stop)

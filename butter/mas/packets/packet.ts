@@ -12,7 +12,6 @@ export interface Response {
 /**
  * Represents an abstract data packet
  *
- * @export
  * @class Packet
  */
 export class Packet {
@@ -36,7 +35,7 @@ export class Packet {
 
 
     /**
-     * Send packet abstract methud
+     * Send packet abstract method
      *
      * @param {number} [timeout] packet timeout (optional)
      * @memberof Packet

@@ -5,7 +5,6 @@ import { Packet, Response } from './packet'
 /**
  * Represents a http data packet
  *
- * @export
  * @class HttpPacket
  * @extends {Packet}
  */
