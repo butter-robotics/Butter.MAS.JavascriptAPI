@@ -1,6 +1,7 @@
 import { PacketBuilder } from '../packets/packet_builder'
 
 export class Client {
+    private _timeout: number;
     ip: string;
     port: number;
     protocol: string;
@@ -15,9 +16,33 @@ export class Client {
      * @memberof Client
      */
     constructor(ip: string, port: number=5555, protocol: string='http') {
+        this._timeout = 40;
         this.ip = ip;
         this.port = port;
         this.protocol = protocol;
+    }
+
+    /**
+     * Get command execution timeout (in milliseconds)
+     *
+     * @memberof Client
+     */
+    get timeout() {
+        return this._timeout;
+    }
+
+    /**
+     * Set time for the command execution
+     *
+     * @param {number} timeout command execution timeout in milliseconds
+     * @memberof Client
+     */
+    set timeout(timeout: number) {
+        if (timeout < 20 || timeout > 120) {
+            throw new Error('Timeout most be an integer number in the range [20, 120]');
+        }
+
+        this._timeout = timeout;
     }
 
     /**
@@ -29,7 +54,7 @@ export class Client {
     getAvailableHandlers() {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('list').build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -48,7 +73,7 @@ export class Client {
 
         const packet = builder.addParameter('list').build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -67,7 +92,7 @@ export class Client {
 
         const packet = builder.addParameter('list').build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
     
 
@@ -87,7 +112,7 @@ export class Client {
                     .addKeyValuePair('readableOnly', readableOnly)
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -105,7 +130,7 @@ export class Client {
                     .addArguments('get', motorName, registerName)
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -124,7 +149,7 @@ export class Client {
                     .addParameter('range')
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -143,7 +168,7 @@ export class Client {
                     .addArguments('set', motorName, registerName, value)
                     .build(); 
 
-        return packet.send();
+        return packet.send(this._timeout);
             }
 
 
@@ -165,8 +190,8 @@ export class Client {
                     .addKeyValuePair('acceleration', acceleration)
                     .build();
 
-        return packet.send();
-            }
+        return packet.send(this._timeout);
+    }
 
     
     /**
@@ -185,7 +210,7 @@ export class Client {
                     .addKeyValuePair('duration', duration)
                     .build();      
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
     
@@ -207,7 +232,7 @@ export class Client {
                     .addParameter('continuously')
                     .build();       
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
     
@@ -227,7 +252,7 @@ export class Client {
     //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
     //                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) 
     //                 .addKeyValuePair('interpolator', interpolator).build();       
-    //     return packet.send();
+    //     return packet.send(this._timeout);
     // }
 
 
@@ -244,7 +269,7 @@ export class Client {
                     .addArgument(animationName)
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -260,7 +285,7 @@ export class Client {
                     .addParameter('pause')
                     .build();        
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
     /**
@@ -275,7 +300,7 @@ export class Client {
                     .addParameter('resume')
                     .build();  
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -291,7 +316,7 @@ export class Client {
                     .addParameter('stop')
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -308,7 +333,7 @@ export class Client {
                     .addArgument(fileName)
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
         
@@ -324,7 +349,7 @@ export class Client {
                     .addParameter('pause')
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -340,7 +365,7 @@ export class Client {
                     .addParameter('resume')
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 
 
@@ -356,6 +381,6 @@ export class Client {
                     .addParameter('stop')
                     .build();
 
-        return packet.send();
+        return packet.send(this._timeout);
     }
 }
