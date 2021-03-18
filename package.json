@@ -14,22 +14,25 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "jest --maxWorkers=1 .*.spec.js",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "npm run lint --fix",
+    "test": "jest --maxWorkers=1 .*.spec.ts",
     "doc": "typedoc && typedoc --plugin typedoc-plugin-markdown --out wiki --hideBreadcrumbs",
     "compile": "tsc",
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
     "publish": "cd build && npm publish --scope @butter-robotics",
-    "permission": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/make_build_public.ps1",
-    "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence",
-    "copy:json": "xcopy \"*.json\" \"build/\" /F /Y",
-    "copy:readme": "xcopy \"README.md\" \"build/\" /F /Y",
-    "copy:licence": "xcopy \"LICENSE\" \"build/\" /F /Y && xcopy \"NOTICE\" \"build/\" /F /Y",
-    "clear:all": "npm run clear:ts && npm run clear:json && npm run clear:readme && npm run clear:licence",
-    "clear:ts": "rmdir \".\\build\\butter\\\" /q /s",
-    "clear:json": "del \".\\build\\*.json\"",
-    "clear:readme": "del \".\\build\\README.md\"",
-    "clear:licence": "del \".\\build\\LICENSE\" && del \".\\build\\NOTICE\""
+    "permission": "node ./scripts/make_build_public.js",
+    "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence && npm run copy:ignore",
+    "copy:json": "shx cp -rf *.json build/",
+    "copy:readme": "shx cp -rf README.md build/",
+    "copy:licence": "shx cp -rf LICENSE build/ && shx cp -rf NOTICE build/",
+    "copy:ignore": "shx cp -rf .*ignore build/",
+    "clear:all": "npm run clear:ts && npm run clear:json && npm run clear:readme && npm run clear:licence && npm run clear:ignore",
+    "clear:ts": "shx rm -rf ./build/butter/",
+    "clear:json": "shx rm -f ./build/*.json",
+    "clear:readme": "shx rm -f ./build/README.md",
+    "clear:licence": "shx rm -f ./build/LICENSE && shx rm -f ./build/NOTICE",
+    "clear:ignore": "shx rm -f ./build/.*ignore"
   },
   "repository": {
     "type": "git",
@@ -50,16 +53,19 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.21",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
-    "eslint": "^7.17.0",
+    "eslint": "^7.22.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-standard": "^4.1.0",
     "jest": "^26.6.3",
+    "shx": "^0.3.3",
+    "ts-jest": "^26.5.4",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.9"
   }
 }

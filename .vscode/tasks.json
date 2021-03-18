@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Lint",
+            "detail": "Lint the project.",
+            "type": "shell",
+            "command": "npm run lint"
+        },
+        {
+            "label": "Test",
+            "detail": "Execute the projects test cases.",
+            "type": "shell",
+            "command": "npm run test",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build",
+            "detail": "Builds the package.",
+            "type": "shell",
+            "command": "npm run build",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Deploy",
+            "detail": "Deploys the package to npm server.",
+            "type": "shell",
+            "command": "npm run publish"
+        },
+        {
+            "label": "Generate Docs",
+            "detail": "Generates and updates the documentation in this repository (you might need to update tree.json manually).",
+            "type": "shell",
+            "command": "npm run doc"
+        }
+    ]
+}
