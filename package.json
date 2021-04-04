@@ -1,6 +1,6 @@
 {
   "name": "@butter-robotics/mas-javascript-api",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
@@ -20,6 +20,8 @@
     "doc": "typedoc && typedoc --plugin typedoc-plugin-markdown --out wiki --hideBreadcrumbs",
     "compile": "tsc",
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags && npm run publish",
     "publish": "cd build && npm publish --scope @butter-robotics",
     "permission": "node ./scripts/make_build_public.js",
     "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence && npm run copy:ignore",
@@ -64,6 +66,7 @@
     "eslint-plugin-standard": "^4.1.0",
     "jest": "^26.6.3",
     "shx": "^0.3.3",
+    "standard-version": "^9.1.1",
     "ts-jest": "^26.5.4",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.9"
