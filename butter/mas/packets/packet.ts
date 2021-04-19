@@ -1,7 +1,19 @@
+export interface ResponseDataPacket {
+    status: string,
+    data: Array<ResponseDataPacket> | string,
+    metadata?: string,
+    async?: boolean
+}
 
+export interface ResponseData {
+    command?: string,
+    parameters?: Array<string>,
+    executed?: boolean,
+    response: ResponseDataPacket,
+}
 
 export interface Response {
-    data: any,
+    data: ResponseData,
     status: number,
     statusText: string,
     headers?: any,
@@ -57,7 +69,12 @@ export class Packet {
         let response: Response;
 
         response = {
-            data: content,
+            data: {
+                response: {
+                    status: "Succeeded",
+                    data: content
+                }
+            },
             status: 200,
             statusText: 'OK'
         };
@@ -78,7 +95,13 @@ export class Packet {
         let response: Response;
 
         response = {
-            data: `{ "exception": "Request resolved with an ${errorType} error" }`,
+            data: {
+                response: {
+                    status: "Failed",
+                    data: `{ "exception": "Request resolved with an ${errorType} error" }`,
+                    metadata: errorType
+                }
+            },
             status: 400,
             statusText: 'Failed'
         };
@@ -100,7 +123,13 @@ export class Packet {
                 response.request = error.request;
             } else {
                 // Something happened in setting up the request that triggered an Error
-                response.data = `{ "exception": "Request resolved with an ${error.message} error" }`;
+                response.data = {
+                    response: {
+                        status: "Failed",
+                        data: `{ "exception": "Request resolved with an ${error.message} error" }`,
+                        metadata: errorType
+                    }
+                };
             }
 
             response.config = error.config;
