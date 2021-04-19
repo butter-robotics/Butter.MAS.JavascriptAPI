@@ -20,7 +20,7 @@ Client factory for different types of protocols
 
 ▸ **getClient**(`ip`: string, `port?`: number, `protocol`: string): *[HttpClient](_butter_mas_clients_client_http_.httpclient.md)‹› | [TcpClient](_butter_mas_clients_client_tcp_.tcpclient.md)‹› | [UdpClient](_butter_mas_clients_client_udp_.udpclient.md)‹›*
 
-*Defined in [butter/mas/clients/client_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/clients/client_factory.ts#L22)*
+*Defined in [butter/mas/clients/client_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/clients/client_factory.ts#L22)*
 
 Creates new client
 
@@ -44,7 +44,7 @@ ___
 
 ▸ **getClientClass**(`protocol`: string): *[HttpClient](_butter_mas_clients_client_http_.httpclient.md)*
 
-*Defined in [butter/mas/clients/client_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/clients/client_factory.ts#L44)*
+*Defined in [butter/mas/clients/client_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/clients/client_factory.ts#L44)*
 
 Get client class
 

@@ -22,7 +22,7 @@
 
 • **config**? : *any*
 
-*Defined in [butter/mas/packets/packet.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L8)*
+*Defined in [butter/mas/packets/packet.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L8)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **data**: *any*
 
-*Defined in [butter/mas/packets/packet.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L4)*
+*Defined in [butter/mas/packets/packet.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L4)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **headers**? : *any*
 
-*Defined in [butter/mas/packets/packet.ts:7](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L7)*
+*Defined in [butter/mas/packets/packet.ts:7](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L7)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **request**? : *any*
 
-*Defined in [butter/mas/packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L9)*
+*Defined in [butter/mas/packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L9)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [butter/mas/packets/packet.ts:5](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L5)*
+*Defined in [butter/mas/packets/packet.ts:5](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L5)*
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **statusText**: *string*
 
-*Defined in [butter/mas/packets/packet.ts:6](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/8aa5604/butter/mas/packets/packet.ts#L6)*
+*Defined in [butter/mas/packets/packet.ts:6](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L6)*

@@ -21,7 +21,7 @@
     "compile": "tsc",
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags && npm run publish",
+    "postrelease": "git push --follow-tags && npm run build && npm run publish",
     "publish": "cd build && npm publish --scope @butter-robotics",
     "permission": "node ./scripts/make_build_public.js",
     "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence && npm run copy:ignore",
