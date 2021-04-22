@@ -2,7 +2,7 @@ export interface ResponseDataPacket {
     status: string,
     data: Array<ResponseDataPacket> | string,
     metadata?: string,
-    async?: boolean
+    asynchronous?: boolean
 }
 
 export interface ResponseData {
