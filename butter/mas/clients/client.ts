@@ -288,6 +288,7 @@ export class Client {
         return packet.send(this._timeout);
     }
 
+
     /**
      * Resume currently paused animation (if available) on the robot
      *
@@ -314,6 +315,22 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('stop')
+                    .build();
+
+        return packet.send(this._timeout);
+    }
+
+
+    /**
+     * Clear animation queue (if present)
+     *
+     * @returns response containing execution result
+     * @memberof Client
+     */
+    clearAnimation() {
+        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+                    .addCommand('animate')
+                    .addParameter('clear')
                     .build();
 
         return packet.send(this._timeout);
