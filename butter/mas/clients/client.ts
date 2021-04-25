@@ -260,13 +260,17 @@ export class Client {
      * Play animation on the robot
      *
      * @param {string} animationName
+     * @param {boolean} [lenient=false] wait for current playing animation (if present) to finish
+     * @param {boolean} [relative=false] play animation relative to the current robot position
      * @returns response containing execution result
      * @memberof Client
      */
-    playAnimation(animationName: string) {
+     playAnimation(animationName: string, lenient: boolean = false, relative: boolean = false) {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
+                    .addKeyValuePair("lenient", lenient)
+                    .addKeyValuePair("relative", relative)
                     .build();
 
         return packet.send(this._timeout);
