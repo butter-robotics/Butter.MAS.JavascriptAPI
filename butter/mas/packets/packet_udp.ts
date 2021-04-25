@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { Packet, Response } from './packet'
+import { Packet } from './packet'
+import { Response } from '../interfaces/response'
 
 
 /**

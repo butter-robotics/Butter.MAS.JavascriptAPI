@@ -1,4 +1,4 @@
-import { Response } from '../response';
+import { Response } from '../interfaces/response';
 
 /**
  * Represents an abstract data packet
