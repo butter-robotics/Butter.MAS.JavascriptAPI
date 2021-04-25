@@ -1,4 +1,5 @@
 import { PacketBuilder } from '../packets/packet_builder'
+import { RotationUnits } from '../interfaces/types'
 
 export class Client {
     private _timeout: number;
@@ -176,18 +177,20 @@ export class Client {
      * Move motor to a certain position (relative to the motor's zero position)
      *
      * @param {string} motorName motor name (as configured on the configurator)
-     * @param {number} position motor final position (in radians)
-     * @param {number} [velocity] motor movement speed (in radians / sec)
-     * @param {number} [acceleration] motor maximal acceleration (in radians / sec * sec)
+     * @param {number} position motor final position (in units)
+     * @param {number} [velocity] motor movement speed (in units / sec)
+     * @param {number} [acceleration] motor maximal acceleration (in units / sec * sec)
+     * @param {RotationUnits} [units='radians'] rotation units
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number) {
+    moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number, units: RotationUnits = 'radians') {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
                     .addKeyValuePair('velocity', velocity)
                     .addKeyValuePair('acceleration', acceleration)
+                    .addKeyValuePair('units', units)
                     .build();
 
         return packet.send(this._timeout);
@@ -198,16 +201,18 @@ export class Client {
      * Move motor to a certain position (relative to the motor's zero position) in fixed duration
      *
      * @param {string} motorName motor name (as configured on the configurator)
-     * @param {number} position motor final position (in radians)
+     * @param {number} position motor final position (in units)
      * @param {number} duration motor movement duration (in milliseconds)
+     * @param {RotationUnits} [units='radians'] rotation units
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorInTime(motorName: string, position: number, duration: number) {
+    moveMotorInTime(motorName: string, position: number, duration: number, units: RotationUnits = 'radians') {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
                     .addKeyValuePair('duration', duration)
+                    .addKeyValuePair('units', units)
                     .build();      
 
         return packet.send(this._timeout);
@@ -219,16 +224,18 @@ export class Client {
      *
      * @param {string} motorName  motor name (as configured on the configurator)
      * @param {string} direction motor movement direction (left, right, stop)
-     * @param {number} [velocity] motor movement speed (in radians / sec)
+     * @param {number} [velocity] motor movement speed (in units / sec)
+     * @param {RotationUnits} [units='radians'] rotation units 
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorInDirection(motorName: string, direction: string, velocity?: number) {
+    moveMotorInDirection(motorName: string, direction: string, velocity?: number, units: RotationUnits = 'radians') {
         const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, direction_code)
                     .addKeyValuePair('velocity', velocity)
+                    .addKeyValuePair('units', units)
                     .addParameter('continuously')
                     .build();       
 
@@ -244,14 +251,18 @@ export class Client {
      * @param {number} steps amount of steps to move
      * @param {number} [velocity] motor movement speed (in radians / sec)
      * @param {string} [interpolator] interpolation function
+     * @param {RotationUnits} [units='radians'] rotation units 
      * @returns response containing execution result
      * @memberof Client
      */
-    // moveMotorInSteps(motorName: string, direction: string, steps: number, velocity?: number, interpolator?: string) {
+    // moveMotorInSteps(motorName: string, direction: string, steps: number, velocity?: number, interpolator?: string, units: RotationUnits = 'radians') {
     //     const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
     //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
-    //                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) 
-    //                 .addKeyValuePair('interpolator', interpolator).build();       
+    //                 .addKeyValuePair('steps', steps)
+    //                 .addKeyValuePair('velocity', velocity) 
+    //                 .addKeyValuePair('interpolator', interpolator)
+    //                 .addKeyValuePair('units', units)
+    //                 .build();       
     //     return packet.send(this._timeout);
     // }
 
