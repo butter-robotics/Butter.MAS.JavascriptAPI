@@ -1,6 +1,6 @@
 {
   "name": "@butter-robotics/mas-javascript-api",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0-beta.0",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
@@ -22,7 +22,7 @@
     "build": "npm run clear:all && tsc && npm run copy:all && npm run permission",
     "release": "standard-version",
     "postrelease": "git push --follow-tags && npm run build && npm run publish",
-    "publish": "cd build && npm publish --scope @butter-robotics --tag alpha",
+    "publish": "cd build && npm publish --scope @butter-robotics --tag beta",
     "permission": "node ./scripts/make_build_public.js",
     "copy:all": "npm run copy:json && npm run copy:readme && npm run copy:licence && npm run copy:ignore",
     "copy:json": "shx cp -rf *.json build/",

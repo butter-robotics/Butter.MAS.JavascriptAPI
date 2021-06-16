@@ -1,4 +1,4 @@
-import { Response } from '../interfaces/response';
+import { Response, ResponseData } from '../interfaces/response';
 
 /**
  * Represents an abstract data packet
@@ -40,20 +40,15 @@ export class Packet {
      *
      *
      * @protected
-     * @param {string} content response content
+     * @param {ResponseData} content response content
      * @returns structured response
      * @memberof Packet
      */
-    protected generateResponse(content: string): Response {
+    protected generateResponse(content: ResponseData): Response {
         let response: Response;
 
         response = {
-            data: {
-                response: {
-                    status: "Succeeded",
-                    data: content
-                }
-            },
+            data: content,
             status: 200,
             statusText: 'OK'
         };
@@ -69,17 +64,36 @@ export class Packet {
      * @param {string} [errorType='unknown'] error type
      * @returns error response
      * @memberof Packet
+    /**
+     *
+     *
+     * @protected
+     * @param {*} [error=null]
+     * @param {string} [errorType='unknown']
+     * @returns
+     * @memberof Packet
      */
     protected generateEmptyResponse(error: any=null, errorType: string='unknown') {
         let response: Response;
 
         response = {
             data: {
+                request: {
+                    query: null,
+                    parameters: null
+                },
                 response: {
                     status: "Failed",
-                    data: `{ "exception": "Request resolved with an ${errorType} error" }`,
-                    metadata: errorType
-                }
+                    data: null,
+                    metadata: { 
+                        handler: "unknown",
+                        exception: `Request resolved with an ${errorType} error. ${error.message}.`, 
+                        timestamp: 0, 
+                        duration: 0, 
+                        asynchronous: false 
+                    }
+                },
+                executed: false
             },
             status: 400,
             statusText: 'Failed'
@@ -103,11 +117,22 @@ export class Packet {
             } else {
                 // Something happened in setting up the request that triggered an Error
                 response.data = {
+                    request: {
+                        query: null,
+                        parameters: null
+                    },
                     response: {
                         status: "Failed",
-                        data: `{ "exception": "Request resolved with an ${error.message} error" }`,
-                        metadata: errorType
-                    }
+                        data: null,
+                        metadata: { 
+                            handler: "unknown",
+                            exception: `Request resolved with an ${errorType} error. ${error.message}.`, 
+                            timestamp: 0, 
+                            duration: 0, 
+                            asynchronous: false 
+                        }
+                    },
+                    executed: false
                 };
             }
 

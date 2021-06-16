@@ -1,15 +1,27 @@
 export interface ResponseDataPacket {
     status: string,
     data: Array<ResponseDataPacket> | string,
-    metadata?: string,
-    asynchronous?: boolean
+    metadata?: MetadataDataPacket,
 }
 
-export interface ResponseData {
-    command?: string,
+export interface RequestDataPacket {
+    query?: string,
     parameters?: Array<string>,
-    executed?: boolean,
+}
+
+export interface MetadataDataPacket {
+    handler: string,
+    asynchronous?: boolean
+    exception?: string,
+    timestamp: number,
+    duration: number,
+}
+
+// *** This Type should be updated together with MAS#ResponseBuilder *** 
+export interface ResponseData {
+    request: RequestDataPacket,
     response: ResponseDataPacket,
+    executed?: boolean,
 }
 
 export interface Response {
