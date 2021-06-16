@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/bennymeg/MAS-JS-API/compare/v2.0.0-alpha.3...v2.0.0) (2021-06-16)
+
+
+### Features
+
+* updated responce structure (BMJA-1) ([b51be42](https://github.com/bennymeg/MAS-JS-API/commit/b51be420be230905f6d470f3784aa34807578021))
+
 ## [2.0.0-alpha.3](https://github.com/bennymeg/MAS-JS-API/compare/v0.13.2...v2.0.0-alpha.3) (2021-04-25)
 
 
