@@ -4,7 +4,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-You will need to install packet maneger (like npm or yarn) in order to use this software
+You will need to install packet manager (like npm or yarn) in order to use this software
 
 ## Installing
 

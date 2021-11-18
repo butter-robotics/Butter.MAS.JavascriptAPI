@@ -73,7 +73,7 @@ export class Packet {
      * @returns
      * @memberof Packet
      */
-    protected generateEmptyResponse(error: any=null, errorType: string='unknown') {
+    protected generateEmptyResponse(error: any=null, errorType: string='unknown'): Response {
         let response: Response;
 
         response = {

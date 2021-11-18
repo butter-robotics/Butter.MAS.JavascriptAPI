@@ -52,7 +52,7 @@ export class Client {
      * @returns response containing all the available robot handlers
      * @memberof Client
      */
-    getAvailableHandlers() {
+    getAvailableHandlers(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('list').build();
 
         return packet.send(this._timeout);
@@ -66,7 +66,7 @@ export class Client {
      * @returns response containing all the available (loaded) robot animations
      * @memberof Client
      */
-    getAvailableAnimations(reload: boolean=false) {
+    getAvailableAnimations(reload: boolean=false): Response {
         const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('animate');
 
         if (reload)
@@ -85,7 +85,7 @@ export class Client {
      * @returns response containing all the available (loaded) robot sound assets
      * @memberof Client
      */
-    getAvailableSounds(reload: boolean=false) {
+    getAvailableSounds(reload: boolean=false): Response {
         const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('audio');
 
         if (reload)
@@ -105,7 +105,7 @@ export class Client {
      * @returns response containing all the available motor registers
      * @memberof Client
      */
-    getAvailableMotorRegisters(motorName: string, readableOnly: boolean=false) {
+    getAvailableMotorRegisters(motorName: string, readableOnly: boolean=false): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName)
@@ -125,7 +125,7 @@ export class Client {
      * @returns response containing register value
      * @memberof Client
      */
-    getMotorRegister(motorName: string, registerName: string) {
+    getMotorRegister(motorName: string, registerName: string): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
@@ -143,7 +143,7 @@ export class Client {
      * @returns response containing register range value
      * @memberof Client
      */
-    getMotorRegisterRange(motorName: string, registerName: string) {
+    getMotorRegisterRange(motorName: string, registerName: string): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
@@ -163,7 +163,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    setMotorRegister(motorName: string, registerName: string, value: string) {
+    setMotorRegister(motorName: string, registerName: string, value: string): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('set', motorName, registerName, value)
@@ -184,7 +184,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number, units: RotationUnits = 'radians') {
+    moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number, units: RotationUnits = 'radians'): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
@@ -207,7 +207,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorInTime(motorName: string, position: number, duration: number, units: RotationUnits = 'radians') {
+    moveMotorInTime(motorName: string, position: number, duration: number, units: RotationUnits = 'radians'): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
@@ -229,7 +229,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    moveMotorInDirection(motorName: string, direction: string, velocity?: number, units: RotationUnits = 'radians') {
+    moveMotorInDirection(motorName: string, direction: string, velocity?: number, units: RotationUnits = 'radians'): Response {
         const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
@@ -255,7 +255,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    // moveMotorInSteps(motorName: string, direction: string, steps: number, velocity?: number, interpolator?: string, units: RotationUnits = 'radians') {
+    // moveMotorInSteps(motorName: string, direction: string, steps: number, velocity?: number, interpolator?: string, units: RotationUnits = 'radians'): Response {
     //     const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
     //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
     //                 .addKeyValuePair('steps', steps)
@@ -276,7 +276,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-     playAnimation(animationName: string, lenient: boolean = false, relative: boolean = false) {
+     playAnimation(animationName: string, lenient: boolean = false, relative: boolean = false): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
@@ -294,7 +294,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    pauseAnimation() {
+    pauseAnimation(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('pause')
@@ -310,7 +310,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    resumeAnimation() {
+    resumeAnimation(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('resume')
@@ -326,7 +326,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    stopAnimation() {
+    stopAnimation(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('stop')
@@ -342,7 +342,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    clearAnimation() {
+    clearAnimation(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('clear')
@@ -359,7 +359,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    playAudio(fileName: string) {
+    playAudio(fileName: string): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addArgument(fileName)
@@ -375,7 +375,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    pauseAudio() {
+    pauseAudio(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('pause')
@@ -391,7 +391,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    resumeAudio() {
+    resumeAudio(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('resume')
@@ -407,7 +407,7 @@ export class Client {
      * @returns response containing execution result
      * @memberof Client
      */
-    stopAudio() {
+    stopAudio(): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('audio')
                     .addParameter('stop')
