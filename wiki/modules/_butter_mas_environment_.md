@@ -14,7 +14,7 @@
 
 • **__version__**: *"2.0.0"* = "2.0.0"
 
-*Defined in [butter/mas/environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/environment.ts#L1)*
+*Defined in [butter/mas/environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/environment.ts#L1)*
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **app_name**: *"@butter-robotics/mas-javascript-api"* = "@butter-robotics/mas-javascript-api"
 
-*Defined in [butter/mas/environment.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/environment.ts#L2)*
+*Defined in [butter/mas/environment.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/environment.ts#L2)*

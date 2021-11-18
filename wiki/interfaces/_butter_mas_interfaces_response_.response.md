@@ -22,7 +22,7 @@
 
 • **config**? : *any*
 
-*Defined in [butter/mas/interfaces/response.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L32)*
+*Defined in [butter/mas/interfaces/response.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L32)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **data**: *[ResponseData](_butter_mas_interfaces_response_.responsedata.md)*
 
-*Defined in [butter/mas/interfaces/response.ts:28](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L28)*
+*Defined in [butter/mas/interfaces/response.ts:28](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L28)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **headers**? : *any*
 
-*Defined in [butter/mas/interfaces/response.ts:31](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L31)*
+*Defined in [butter/mas/interfaces/response.ts:31](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L31)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **request**? : *any*
 
-*Defined in [butter/mas/interfaces/response.ts:33](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L33)*
+*Defined in [butter/mas/interfaces/response.ts:33](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L33)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [butter/mas/interfaces/response.ts:29](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L29)*
+*Defined in [butter/mas/interfaces/response.ts:29](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L29)*
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **statusText**: *string*
 
-*Defined in [butter/mas/interfaces/response.ts:30](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L30)*
+*Defined in [butter/mas/interfaces/response.ts:30](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L30)*

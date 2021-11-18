@@ -20,7 +20,7 @@ Packet factory for different types of protocols
 
 ▸ **getPacket**(`ip`: string, `port`: number, `query`: string, `protocol`: string): *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)‹› | [TcpPacket](_butter_mas_packets_packet_tcp_.tcppacket.md)‹› | [UdpPacket](_butter_mas_packets_packet_udp_.udppacket.md)‹›*
 
-*Defined in [butter/mas/packets/packet_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_factory.ts#L22)*
+*Defined in [butter/mas/packets/packet_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/packets/packet_factory.ts#L22)*
 
 Creates new client
 
@@ -45,7 +45,7 @@ ___
 
 ▸ **getPacketClass**(`protocol`: string): *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)*
 
-*Defined in [butter/mas/packets/packet_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_factory.ts#L44)*
+*Defined in [butter/mas/packets/packet_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/packets/packet_factory.ts#L44)*
 
 Get packet class
 

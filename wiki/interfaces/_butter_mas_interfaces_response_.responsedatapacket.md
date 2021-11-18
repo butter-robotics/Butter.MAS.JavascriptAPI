@@ -19,7 +19,7 @@
 
 • **data**: *Array‹[ResponseDataPacket](_butter_mas_interfaces_response_.responsedatapacket.md)› | string*
 
-*Defined in [butter/mas/interfaces/response.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L3)*
+*Defined in [butter/mas/interfaces/response.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L3)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **metadata**? : *[MetadataDataPacket](_butter_mas_interfaces_response_.metadatadatapacket.md)*
 
-*Defined in [butter/mas/interfaces/response.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L4)*
+*Defined in [butter/mas/interfaces/response.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L4)*
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 • **status**: *string*
 
-*Defined in [butter/mas/interfaces/response.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/interfaces/response.ts#L2)*
+*Defined in [butter/mas/interfaces/response.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L2)*
