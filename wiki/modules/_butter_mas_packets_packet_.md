@@ -6,7 +6,3 @@
 ### Classes
 
 * [Packet](../classes/_butter_mas_packets_packet_.packet.md)
-
-### Interfaces
-
-* [Response](../interfaces/_butter_mas_packets_packet_.response.md)

@@ -40,7 +40,7 @@ Builds a command packet using the builder design pattern
 
 \+ **new PacketBuilder**(`ip`: string, `port`: number, `protocol`: string): *[PacketBuilder](_butter_mas_packets_packet_builder_.packetbuilder.md)*
 
-*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L17)*
+*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L17)*
 
 Creates an instance of PacketBuilder.
 
@@ -62,7 +62,7 @@ Name | Type | Default | Description |
 
 • **args**: *Array‹string›*
 
-*Defined in [butter/mas/packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L15)*
+*Defined in [butter/mas/packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L15)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 • **cmd**: *string*
 
-*Defined in [butter/mas/packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L14)*
+*Defined in [butter/mas/packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L14)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **ip**: *string*
 
-*Defined in [butter/mas/packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L10)*
+*Defined in [butter/mas/packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L10)*
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 • **keys**: *Map‹string, string›*
 
-*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L17)*
+*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L17)*
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 • **packet**: *any*
 
-*Defined in [butter/mas/packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L12)*
+*Defined in [butter/mas/packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L12)*
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 • **params**: *Array‹string›*
 
-*Defined in [butter/mas/packets/packet_builder.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L16)*
+*Defined in [butter/mas/packets/packet_builder.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L16)*
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 • **port**: *number*
 
-*Defined in [butter/mas/packets/packet_builder.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L11)*
+*Defined in [butter/mas/packets/packet_builder.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L11)*
 
 ## Methods
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **_formatParameter**(`parameter`: string): *string*
 
-*Defined in [butter/mas/packets/packet_builder.ts:144](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L144)*
+*Defined in [butter/mas/packets/packet_builder.ts:144](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L144)*
 
 Formats parameter properly
 
@@ -140,7 +140,7 @@ ___
 
 ▸ **addArgument**(`argument`: string | number | boolean): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:61](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L61)*
+*Defined in [butter/mas/packets/packet_builder.ts:61](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L61)*
 
 Add argument
 
@@ -162,7 +162,7 @@ ___
 
 ▸ **addArguments**(...`argumentss`: Array‹string | number | boolean›): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L76)*
+*Defined in [butter/mas/packets/packet_builder.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L76)*
 
 Add arguments
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **addCommand**(`command`: string): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L47)*
+*Defined in [butter/mas/packets/packet_builder.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L47)*
 
 Add command
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **addKeyValuePair**(`key`: string, `value`: string | number | boolean): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:127](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L127)*
+*Defined in [butter/mas/packets/packet_builder.ts:127](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L127)*
 
 Add key value pair
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **addParameter**(`parameter`: string): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:94](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L94)*
+*Defined in [butter/mas/packets/packet_builder.ts:94](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L94)*
 
 Add parameter
 
@@ -251,7 +251,7 @@ ___
 
 ▸ **addParameters**(...`parameters`: Array‹string›): *this*
 
-*Defined in [butter/mas/packets/packet_builder.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L108)*
+*Defined in [butter/mas/packets/packet_builder.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L108)*
 
 Add parameters
 
@@ -273,7 +273,7 @@ ___
 
 ▸ **build**(): *any*
 
-*Defined in [butter/mas/packets/packet_builder.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet_builder.ts#L166)*
+*Defined in [butter/mas/packets/packet_builder.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet_builder.ts#L166)*
 
 Builds the packet
 

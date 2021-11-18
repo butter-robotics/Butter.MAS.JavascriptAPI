@@ -38,7 +38,7 @@ Represents an abstract data packet
 
 \+ **new Packet**(`ip`: string, `port`: number, `query`: string): *[Packet](_butter_mas_packets_packet_.packet.md)*
 
-*Defined in [butter/mas/packets/packet.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L20)*
+*Defined in [butter/mas/packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L11)*
 
 Creates an instance of Packet.
 
@@ -60,7 +60,7 @@ Name | Type | Description |
 
 • **ip**: *string*
 
-*Defined in [butter/mas/packets/packet.ts:18](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L18)*
+*Defined in [butter/mas/packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L9)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **port**: *number*
 
-*Defined in [butter/mas/packets/packet.ts:19](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L19)*
+*Defined in [butter/mas/packets/packet.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L10)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 • **query**: *string*
 
-*Defined in [butter/mas/packets/packet.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L20)*
+*Defined in [butter/mas/packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L11)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **equals**(`other`: any): *boolean*
 
-*Defined in [butter/mas/packets/packet.ts:114](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L114)*
+*Defined in [butter/mas/packets/packet.ts:147](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L147)*
 
 **Parameters:**
 
@@ -98,11 +98,14 @@ ___
 
 ### `Protected` generateEmptyResponse
 
-▸ **generateEmptyResponse**(`error`: any, `errorType`: string): *[Response](../interfaces/_butter_mas_packets_packet_.response.md)*
+▸ **generateEmptyResponse**(`error`: any, `errorType`: string): *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
 
-*Defined in [butter/mas/packets/packet.ts:77](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L77)*
+*Defined in [butter/mas/packets/packet.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L76)*
 
 Generates empty response packet
+
+**`memberof`** Packet
+/**
 
 **`memberof`** Packet
 
@@ -113,7 +116,7 @@ Name | Type | Default |
 `error` | any | null |
 `errorType` | string | "unknown" |
 
-**Returns:** *[Response](../interfaces/_butter_mas_packets_packet_.response.md)*
+**Returns:** *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
 
 error response
 
@@ -121,9 +124,9 @@ ___
 
 ### `Protected` generateResponse
 
-▸ **generateResponse**(`content`: string): *[Response](../interfaces/_butter_mas_packets_packet_.response.md)*
+▸ **generateResponse**(`content`: [ResponseData](../interfaces/_butter_mas_interfaces_response_.responsedata.md)): *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
 
-*Defined in [butter/mas/packets/packet.ts:56](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L56)*
+*Defined in [butter/mas/packets/packet.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L47)*
 
 **`memberof`** Packet
 
@@ -131,9 +134,9 @@ ___
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`content` | string | response content |
+`content` | [ResponseData](../interfaces/_butter_mas_interfaces_response_.responsedata.md) | response content |
 
-**Returns:** *[Response](../interfaces/_butter_mas_packets_packet_.response.md)*
+**Returns:** *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
 
 structured response
 
@@ -143,7 +146,7 @@ ___
 
 ▸ **send**(`timeout?`: number): *void*
 
-*Defined in [butter/mas/packets/packet.ts:43](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/ab8f204/butter/mas/packets/packet.ts#L43)*
+*Defined in [butter/mas/packets/packet.ts:34](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/f2f46d3/butter/mas/packets/packet.ts#L34)*
 
 Send packet abstract method
 
