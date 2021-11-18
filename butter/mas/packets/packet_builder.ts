@@ -185,7 +185,7 @@ export class PacketBuilder {
             query = `${query}${keys.join('&')}`;
         }
 
-        let uri = ['cmd', 'json'].join('/');
+        let uri = ['api', 'robots', 'any', 'command'].join('/');
         uri = `${uri}/${query.replace(/&+$/, "")}`;
 
         return new this.packet(this.ip, this.port, uri);
