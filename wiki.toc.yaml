@@ -20,17 +20,15 @@
   - label: Response
     items:
     - label: Response
-      data: wiki/classes/_butter_mas_interfaces_response_.response.md
-      - label: Response
-      data: wiki/classes/_butter_mas_interfaces_response_.response.md
-      - label: Response Data
-      data: wiki/classes/_butter_mas_interfaces_response_.responsedata.md
-      - label: Request Data Packet
-      data: wiki/classes/_butter_mas_interfaces_response_.requestdatapacket.md
-      - label: Response Data Packet
-      data: wiki/classes/_butter_mas_interfaces_response_.responsedatapacket.md
-      - label: Metadata Data Packet
-      data: wiki/classes/_butter_mas_interfaces_response_.metadatadatapacket.md
+    data: wiki/classes/_butter_mas_interfaces_response_.response.md
+    - label: Response Data
+    data: wiki/classes/_butter_mas_interfaces_response_.responsedata.md
+    - label: Request Data Packet
+    data: wiki/classes/_butter_mas_interfaces_response_.requestdatapacket.md
+    - label: Response Data Packet
+    data: wiki/classes/_butter_mas_interfaces_response_.responsedatapacket.md
+    - label: Metadata Data Packet
+    data: wiki/classes/_butter_mas_interfaces_response_.metadatadatapacket.md
 - label: Internal API
   items:
   - label: Packet Builder
