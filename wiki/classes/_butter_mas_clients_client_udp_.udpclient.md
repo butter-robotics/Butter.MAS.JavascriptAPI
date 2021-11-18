@@ -65,7 +65,7 @@ Creates an instance of UdpClient.
 Name | Type | Default |
 ------ | ------ | ------ |
 `ip` | string | - |
-`port` | number | 5000 |
+`port` | number | 3030 |
 `protocol` | string | "udp" |
 
 **Returns:** *[UdpClient](_butter_mas_clients_client_udp_.udpclient.md)*

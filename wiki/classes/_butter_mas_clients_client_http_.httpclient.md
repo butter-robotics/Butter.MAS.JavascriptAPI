@@ -65,7 +65,7 @@ Creates an instance of HttpClient.
 Name | Type | Default |
 ------ | ------ | ------ |
 `ip` | string | - |
-`port` | number | 5555 |
+`port` | number | 3000 |
 `protocol` | string | "http" |
 
 **Returns:** *[HttpClient](_butter_mas_clients_client_http_.httpclient.md)*

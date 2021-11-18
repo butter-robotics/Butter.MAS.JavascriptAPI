@@ -65,7 +65,7 @@ Creates an instance of TcpClient.
 Name | Type | Default |
 ------ | ------ | ------ |
 `ip` | string | - |
-`port` | number | 5050 |
+`port` | number | 3003 |
 `protocol` | string | "tcp" |
 
 **Returns:** *[TcpClient](_butter_mas_clients_client_tcp_.tcpclient.md)*

@@ -66,7 +66,7 @@ Creates an instance of Client.
 Name | Type | Default |
 ------ | ------ | ------ |
 `ip` | string | - |
-`port` | number | 5555 |
+`port` | number | 3000 |
 `protocol` | string | "http" |
 
 **Returns:** *[Client](_butter_mas_clients_client_.client.md)*
