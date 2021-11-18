@@ -18,7 +18,7 @@
 
 • **parameters**? : *Array‹string›*
 
-*Defined in [butter/mas/interfaces/response.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L9)*
+*Defined in [butter/mas/interfaces/response.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L9)*
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 • **query**? : *string*
 
-*Defined in [butter/mas/interfaces/response.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/3caa871/butter/mas/interfaces/response.ts#L8)*
+*Defined in [butter/mas/interfaces/response.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L8)*
