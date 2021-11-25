@@ -1,5 +1,6 @@
 import { PacketBuilder } from '../packets/packet_builder'
 import { RotationUnits } from '../interfaces/types'
+import { Response } from '../api';
 
 export class Client {
     private _timeout: number;
