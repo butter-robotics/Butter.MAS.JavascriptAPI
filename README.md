@@ -4,10 +4,6 @@ HTTP client javascript API for Butter MAS platform.
 [![licence](https://img.shields.io/github/license/butter-robotics/Butter.MAS.JavascriptAPI.svg)](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 ![npm](https://img.shields.io/npm/v/@butter-robotics/mas-javascript-api)
 
-___
-🚧**NOTE:** this repository is still a work in progress.
-___
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
