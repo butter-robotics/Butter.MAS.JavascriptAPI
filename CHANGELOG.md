@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/compare/v2.0.0...v2.3.0) (2022-03-11)
+
+
+### Features
+
+* added response typing ([3caa871](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/3caa87152f9a51b44aa56221b8c40c004d4d4d47))
+* update v2 ports ([d7f54ff](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/d7f54ffe7a7a16b26227406612827a7263aa6665))
+* updated v2 uri ([f2f46d3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/f2f46d3cf61c297f4345ed03428854a63fe3822a))
+
+
+### Bug Fixes
+
+* increment version ([f8b4065](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/f8b406540811fb0c5c4dc608a796bddae322315e))
+* response typing ([aa80495](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/aa804959d0677f485cbc91c2155d5aa61b24a516))
+* wiki toc ([d278e27](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/commit/d278e27ca1db8a2389168c93b2effbe7014acef2))
+
 ## [2.0.0](https://github.com/bennymeg/MAS-JS-API/compare/v2.0.0-alpha.3...v2.0.0) (2021-06-16)
 
 
