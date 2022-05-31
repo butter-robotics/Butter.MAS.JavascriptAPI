@@ -1,0 +1,48 @@
+---
+- label: Installation
+  data: installation.md
+- label: Documentation
+  data: documentation.md
+- label: API
+  items:
+  - label: Client Factory
+    data: classes/clients_client_factory.ClientFactory.md
+  - label: HTTP Client
+    data: classes/clients_client_http.HttpClient.md
+  - label: TCP Client
+    data: classes/clients_client_tcp.TcpClient.md
+    disabled: true
+  - label: UDP Client
+    data: classes/clients_client_udp.UdpClient.md
+    disabled: true
+  - label: Client
+    data: classes/clients_client.Client.md
+  - label: Response
+    items:
+    - label: Response
+      data: interfaces/interfaces_response.Response.md
+    - label: Response Data
+      data: interfaces/interfaces_response.ResponseData.md
+    - label: Request Data Packet
+      data: interfaces/interfaces_response.RequestDataPacket.md
+    - label: Response Data Packet
+      data: interfaces/interfaces_response.ResponseDataPacket.md
+    - label: Metadata Data Packet
+      data: interfaces/interfaces_response.MetadataDataPacket.md
+- label: Internal API
+  items:
+  - label: Packet Builder
+    data: classes/packets_packet_builder.PacketBuilder.md
+  - label: Packet Factory
+    data: classes/packets_packet_factory.PacketFactory.md
+  - label: HTTP Packet
+    data: classes/packets_packet_http.HttpPacket.md
+  - label: TCP Packet
+    data: classes/packets_packet_tcp.TcpPacket.md
+    disabled: true
+  - label: UDP Packet
+    data: classes/packets_packet_udp.UdpPacket.md
+    disabled: true
+  - label: Packet
+    data: classes/packets_packet.Packet.md
+...
