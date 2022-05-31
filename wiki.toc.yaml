@@ -3,7 +3,7 @@
 multipart: false
 projects:
   default:
-    label: MAS Animator
+    label: MAS Javascript API
     path: wiki
     versions:
       latest:
@@ -19,4 +19,5 @@ projects:
         toc: v1/revision.toc.yaml
         release: stable
         supported: false
+        disabled: true
 ...
