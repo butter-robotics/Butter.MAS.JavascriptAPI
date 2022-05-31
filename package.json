@@ -1,6 +1,6 @@
 {
   "name": "@butter-robotics/mas-javascript-api",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
@@ -53,23 +53,23 @@
   },
   "homepage": "https://butter-robotics.web.app/#/library/documentation/mas_os_javascript_api",
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
-    "eslint": "^8.10.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.4",
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-standard": "^5.0.0",
-    "jest": "^27.5.1",
+    "jest": "^28.1.0",
     "shx": "^0.3.4",
-    "standard-version": "^9.3.2",
-    "ts-jest": "^27.1.3",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^28.0.3",
     "tsc": "^2.0.4",
-    "typescript": "^4.6.2"
+    "typescript": "^4.7.2"
   }
 }
