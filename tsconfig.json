@@ -15,7 +15,6 @@
         "rootDir": "."
     },
     "typedocOptions": {
-        "mode": "modules",
         "out": "docs",
         "name": "Butter MAS Javascript API Documentation"
     },
