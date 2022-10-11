@@ -1,6 +1,6 @@
 {
   "name": "@butter-robotics/mas-javascript-api",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Javascript API for Butter MAS platform",
   "author": "Benny Megidish",
   "license": "Apache-2.0",
@@ -52,7 +52,7 @@
   "bugs": {
     "url": "https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/issues"
   },
-  "homepage": "https://butter-robotics.web.app/#/library/documentation/mas_os_javascript_api",
+  "homepage": "https://butter-robotics.web.app/#/library/documentation/mas_javascript_api",
   "dependencies": {
     "axios": "^0.27.2"
   },
