@@ -14,7 +14,7 @@ export class PacketBuilder {
     cmd: string;
     args: Array<string>;
     params: Array<string>;
-    keys: Map<string,string>;
+    keys: Map<string, string>;
 
     /**
      * Creates an instance of PacketBuilder.
@@ -23,7 +23,7 @@ export class PacketBuilder {
      * @param {string} [protocol="http"] communication protocol
      * @memberof PacketBuilder
      */
-    constructor(ip: string, port: number, protocol: string="http") {
+    constructor(ip: string, port: number, protocol: string='http') {
         this.ip = ip;
         this.port = port;
 
@@ -51,7 +51,7 @@ export class PacketBuilder {
     }
 
 
-    /** 
+    /**
      * Add argument
      *
      * @param {string | number | boolean} argument
@@ -181,7 +181,7 @@ export class PacketBuilder {
 
         if (this.keys) {
             let keys: Array<string> = [];
-            this.keys.forEach((key, value) => {keys.push(`${key}=${value}`)});
+            this.keys.forEach((value, key) => {keys.push(`${key}=${value}`)});
             query = `${query}${keys.join('&')}`;
         }
 

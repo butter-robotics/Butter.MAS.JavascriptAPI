@@ -1,3 +1,11 @@
+export interface MetadataDataPacket {
+    handler: string,
+    asynchronous?: boolean
+    exception?: string,
+    timestamp: number,
+    duration: number,
+}
+
 export interface ResponseDataPacket {
     status: string,
     data: Array<ResponseDataPacket> | string,
@@ -9,15 +17,7 @@ export interface RequestDataPacket {
     parameters?: Array<string>,
 }
 
-export interface MetadataDataPacket {
-    handler: string,
-    asynchronous?: boolean
-    exception?: string,
-    timestamp: number,
-    duration: number,
-}
-
-// *** This Type should be updated together with MAS#ResponseBuilder *** 
+// *** This Type should be updated together with MAS#ResponseBuilder ***
 export interface ResponseData {
     request: RequestDataPacket,
     response: ResponseDataPacket,

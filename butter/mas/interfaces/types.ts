@@ -1,1 +1,1 @@
-export type RotationUnits = "degrees" | "radians";
+export type RotationUnits = 'degrees' | 'radians';
