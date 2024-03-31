@@ -14,7 +14,7 @@ export class HttpClient extends Client {
      * @param {string} [protocol='http']
      * @memberof HttpClient
      */
-    constructor(ip: string, port: number=3000, protocol: string='http') {
+    constructor(ip: string, port: number = 3000, protocol: string = 'http') {
         super(ip, port, protocol);
     }
 }

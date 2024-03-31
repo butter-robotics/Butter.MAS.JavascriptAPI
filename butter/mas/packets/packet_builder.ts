@@ -23,7 +23,7 @@ export class PacketBuilder {
      * @param {string} [protocol="http"] communication protocol
      * @memberof PacketBuilder
      */
-    constructor(ip: string, port: number, protocol: string='http') {
+    constructor(ip: string, port: number, protocol: string = 'http') {
         this.ip = ip;
         this.port = port;
 
@@ -63,7 +63,7 @@ export class PacketBuilder {
 
         return this;
     }
-    
+
 
 
     /**
@@ -170,24 +170,25 @@ export class PacketBuilder {
 
         let query = `${this.cmd}?`;
 
-        if (this.args) { 
+        if (this.args) {
             query = `${query}${this.args.join('&')}&`;
         }
 
-        if (this.params) { 
+        if (this.params) {
             const params = this.params.map(this._formatParameter);
             query = `${query}${params.join('&')}&`;
         }
 
         if (this.keys) {
-            let keys: Array<string> = [];
-            this.keys.forEach((value, key) => {keys.push(`${key}=${value}`)});
+            const keys: Array<string> = [];
+            this.keys.forEach((value, key) => { keys.push(`${key}=${value}`) });
             query = `${query}${keys.join('&')}`;
         }
 
         let uri = ['api', 'robots', 'any', 'command'].join('/');
-        uri = `${uri}/${query.replace(/&+$/, "")}`;
+        uri = `${uri}/${query.replace(/&+$/, '')}`;
 
+        // eslint-disable-next-line new-cap
         return new this.packet(this.ip, this.port, uri);
-    }  
+    }
 }

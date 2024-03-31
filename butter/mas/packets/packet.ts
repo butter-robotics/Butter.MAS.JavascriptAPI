@@ -10,7 +10,7 @@ export class Packet {
     port: number;
     query: string;
 
-    
+
     /**
      * Creates an instance of Packet.
      * @param {string} ip robot IP
@@ -45,9 +45,7 @@ export class Packet {
      * @memberof Packet
      */
     protected generateResponse(content: ResponseData): Response {
-        let response: Response;
-
-        response = {
+        const response: Response = {
             data: content,
             status: 200,
             statusText: 'OK'
@@ -73,7 +71,7 @@ export class Packet {
      * @returns
      * @memberof Packet
      */
-    protected generateEmptyResponse(error: any=null, errorType: string='unknown'): Response {
+    protected generateEmptyResponse(error: any = null, errorType: string = 'unknown'): Response {
         let response: Response;
 
         response = {
@@ -83,14 +81,14 @@ export class Packet {
                     parameters: null
                 },
                 response: {
-                    status: "Failed",
+                    status: 'Failed',
                     data: null,
-                    metadata: { 
-                        handler: "unknown",
-                        exception: `Request resolved with an ${errorType} error. ${error.message}.`, 
-                        timestamp: 0, 
-                        duration: 0, 
-                        asynchronous: false 
+                    metadata: {
+                        handler: 'unknown',
+                        exception: `Request resolved with an ${errorType} error. ${error.message}.`,
+                        timestamp: 0,
+                        duration: 0,
+                        asynchronous: false
                     }
                 },
                 executed: false
@@ -122,14 +120,14 @@ export class Packet {
                         parameters: null
                     },
                     response: {
-                        status: "Failed",
+                        status: 'Failed',
                         data: null,
-                        metadata: { 
-                            handler: "unknown",
-                            exception: `Request resolved with an ${errorType} error. ${error.message}.`, 
-                            timestamp: 0, 
-                            duration: 0, 
-                            asynchronous: false 
+                        metadata: {
+                            handler: 'unknown',
+                            exception: `Request resolved with an ${errorType} error. ${error.message}.`,
+                            timestamp: 0,
+                            duration: 0,
+                            asynchronous: false
                         }
                     },
                     executed: false
@@ -145,6 +143,6 @@ export class Packet {
 
 
     equals(other: any) {
-        return other instanceof Packet && this.ip == other.ip && this.port == other.port && this.query == other.query;
+        return other instanceof Packet && this.ip === other.ip && this.port === other.port && this.query === other.query;
     }
 }

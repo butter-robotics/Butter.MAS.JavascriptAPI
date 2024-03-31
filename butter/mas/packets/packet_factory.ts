@@ -8,7 +8,6 @@ import { UdpPacket } from './packet_udp';
  * @class PacketFactory
  */
 export class PacketFactory {
-
     /**
      * Creates new client
      *
@@ -19,13 +18,13 @@ export class PacketFactory {
      * @returns requested client
      * @memberof PacketFactory
      */
-    getPacket(ip: string, port: number, query: string,  protocol: string="http") {
-        if (protocol == "http") {
+    getPacket(ip: string, port: number, query: string, protocol: string = 'http') {
+        if (protocol === 'http') {
             return new HttpPacket(ip, port, query);
-        } else if (protocol == "tcp") {
+        } else if (protocol === 'tcp') {
             throw new Error('Not Implemented');
             return new TcpPacket(ip, port, query);
-        } else if (protocol == "udp") {
+        } else if (protocol === 'udp') {
             throw new Error('Not Implemented');
             return new UdpPacket(ip, port, query);
         } else {
@@ -41,13 +40,13 @@ export class PacketFactory {
      * @returns
      * @memberof PacketFactory
      */
-    getPacketClass(protocol: string="http") {
-        if (protocol == "http") {
+    getPacketClass(protocol: string = 'http') {
+        if (protocol === 'http') {
             return HttpPacket;
-        } else if (protocol == "tcp") {
+        } else if (protocol === 'tcp') {
             throw new Error('Not Implemented');
             return TcpPacket;
-        } else if (protocol == "udp") {
+        } else if (protocol === 'udp') {
             throw new Error('Not Implemented');
             return UdpPacket;
         } else {

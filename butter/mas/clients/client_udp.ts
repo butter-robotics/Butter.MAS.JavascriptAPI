@@ -14,7 +14,7 @@ export class UdpClient extends Client {
      * @param {string} [protocol='udp']
      * @memberof UdpClient
      */
-    constructor(ip: string, port: number=3030, protocol: string='udp') {
+    constructor(ip: string, port: number = 3030, protocol: string = 'udp') {
         super(ip, port, protocol);
     }
 }

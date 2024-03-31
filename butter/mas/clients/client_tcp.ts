@@ -14,7 +14,7 @@ export class TcpClient extends Client {
      * @param {string} [protocol='tcp']
      * @memberof TcpClient
      */
-    constructor(ip: string, port: number=3003, protocol: string='tcp') {
+    constructor(ip: string, port: number = 3003, protocol: string = 'tcp') {
         super(ip, port, protocol);
     }
 }

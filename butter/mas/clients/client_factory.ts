@@ -9,7 +9,6 @@ import { UdpClient } from './client_udp';
  * @class ClientFactory
  */
 export class ClientFactory {
-
     /**
      * Creates new client
      *
@@ -19,13 +18,13 @@ export class ClientFactory {
      * @returns requested client
      * @memberof ClientFactory
      */
-    getClient(ip: string, port?: number, protocol: string="http") {
-        if (protocol == "http") {
+    getClient(ip: string, port?: number, protocol: string = 'http') {
+        if (protocol === 'http') {
             return port ? new HttpClient(ip, port) : new HttpClient(ip);
-        } else if (protocol == "tcp") {
+        } else if (protocol === 'tcp') {
             throw new Error('Not Implemented');
             return port ? new TcpClient(ip, port) : new TcpClient(ip);
-        } else if (protocol == "udp") {
+        } else if (protocol === 'udp') {
             throw new Error('Not Implemented');
             return port ? new UdpClient(ip, port) : new UdpClient(ip);
         } else {
@@ -41,13 +40,13 @@ export class ClientFactory {
      * @returns
      * @memberof ClientFactory
      */
-    getClientClass(protocol: string="http") {
-        if (protocol == "http") {
+    getClientClass(protocol: string = 'http') {
+        if (protocol === 'http') {
             return HttpClient;
-        } else if (protocol == "tcp") {
+        } else if (protocol === 'tcp') {
             throw new Error('Not Implemented');
             return TcpClient;
-        } else if (protocol == "udp") {
+        } else if (protocol === 'udp') {
             throw new Error('Not Implemented');
             return UdpClient;
         } else {

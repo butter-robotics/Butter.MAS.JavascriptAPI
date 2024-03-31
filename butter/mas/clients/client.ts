@@ -11,13 +11,13 @@ export class Client {
 
     /**
      * Creates an instance of Client.
-     * 
+     *
      * @param {string} ip
      * @param {number} [port=3000]
      * @param {string} [protocol='http']
      * @memberof Client
      */
-    constructor(ip: string, port: number=3000, protocol: string='http') {
+    constructor(ip: string, port: number = 3000, protocol: string = 'http') {
         this._timeout = 40;
         this.ip = ip;
         this.port = port;
@@ -67,11 +67,12 @@ export class Client {
      * @returns response containing all the available (loaded) robot animations
      * @memberof Client
      */
-    getAvailableAnimations(reload: boolean=false): Response {
+    getAvailableAnimations(reload: boolean = false): Response {
         const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('animate');
 
-        if (reload)
+        if (reload) {
             builder.addParameter('reload');
+        }
 
         const packet = builder.addParameter('list').build();
 
@@ -82,21 +83,22 @@ export class Client {
     /**
      * Get available (loaded) robot sound assets
      *
-     * @param {boolean} [reload=false] 
+     * @param {boolean} [reload=false]
      * @returns response containing all the available (loaded) robot sound assets
      * @memberof Client
      */
-    getAvailableSounds(reload: boolean=false): Response {
+    getAvailableSounds(reload: boolean = false): Response {
         const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('audio');
 
-        if (reload)
+        if (reload) {
             builder.addParameter('reload');
+        }
 
         const packet = builder.addParameter('list').build();
 
         return packet.send(this._timeout);
     }
-    
+
 
     /**
      * Get all available motor registers (for Dynamixel motors only)
@@ -106,7 +108,7 @@ export class Client {
      * @returns response containing all the available motor registers
      * @memberof Client
      */
-    getAvailableMotorRegisters(motorName: string, readableOnly: boolean=false): Response {
+    getAvailableMotorRegisters(motorName: string, readableOnly: boolean = false): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName)
@@ -168,7 +170,7 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('dxl')
                     .addArguments('set', motorName, registerName, value)
-                    .build(); 
+                    .build();
 
         return packet.send(this._timeout);
             }
@@ -197,7 +199,7 @@ export class Client {
         return packet.send(this._timeout);
     }
 
-    
+
     /**
      * Move motor to a certain position (relative to the motor's zero position) in fixed duration
      *
@@ -214,36 +216,37 @@ export class Client {
                     .addArguments(motorName, position)
                     .addKeyValuePair('duration', duration)
                     .addKeyValuePair('units', units)
-                    .build();      
+                    .build();
 
         return packet.send(this._timeout);
     }
 
-    
+
     /**
      * Move motor to a certain direction (relative to the motor's current position)
      *
      * @param {string} motorName  motor name (as configured on the configurator)
      * @param {string} direction motor movement direction (left, right, stop)
      * @param {number} [velocity] motor movement speed (in units / sec)
-     * @param {RotationUnits} [units='radians'] rotation units 
+     * @param {RotationUnits} [units='radians'] rotation units
      * @returns response containing execution result
      * @memberof Client
      */
     moveMotorInDirection(motorName: string, direction: string, velocity?: number, units: RotationUnits = 'radians'): Response {
-        const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
+        // eslint-disable-next-line camelcase
+        const direction_code = direction.toLowerCase() === 'right' ? 1 : direction.toLowerCase() === 'left' ? -1 : 0
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, direction_code)
                     .addKeyValuePair('velocity', velocity)
                     .addKeyValuePair('units', units)
                     .addParameter('continuously')
-                    .build();       
+                    .build();
 
         return packet.send(this._timeout);
     }
 
-    
+
     /**
      * Move motor a certain amount of steps (relative to the motor's current position)
      *
@@ -252,7 +255,7 @@ export class Client {
      * @param {number} steps amount of steps to move
      * @param {number} [velocity] motor movement speed (in radians / sec)
      * @param {string} [interpolator] interpolation function
-     * @param {RotationUnits} [units='radians'] rotation units 
+     * @param {RotationUnits} [units='radians'] rotation units
      * @returns response containing execution result
      * @memberof Client
      */
@@ -260,10 +263,10 @@ export class Client {
     //     const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
     //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
     //                 .addKeyValuePair('steps', steps)
-    //                 .addKeyValuePair('velocity', velocity) 
+    //                 .addKeyValuePair('velocity', velocity)
     //                 .addKeyValuePair('interpolator', interpolator)
     //                 .addKeyValuePair('units', units)
-    //                 .build();       
+    //                 .build();
     //     return packet.send(this._timeout);
     // }
 
@@ -281,8 +284,8 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
-                    .addKeyValuePair("lenient", lenient)
-                    .addKeyValuePair("relative", relative)
+                    .addKeyValuePair('lenient', lenient)
+                    .addKeyValuePair('relative', relative)
                     .build();
 
         return packet.send(this._timeout);
@@ -299,7 +302,7 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('pause')
-                    .build();        
+                    .build();
 
         return packet.send(this._timeout);
     }
@@ -315,7 +318,7 @@ export class Client {
         const packet = new PacketBuilder(this.ip, this.port, this.protocol)
                     .addCommand('animate')
                     .addParameter('resume')
-                    .build();  
+                    .build();
 
         return packet.send(this._timeout);
     }
@@ -369,7 +372,7 @@ export class Client {
         return packet.send(this._timeout);
     }
 
-        
+
     /**
      * Pause current audio playback (if available) on the robot
      *

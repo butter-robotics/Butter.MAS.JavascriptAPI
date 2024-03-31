@@ -6,12 +6,10 @@ import { Response } from '../interfaces/response'
 /**
  * Represents a http data packet
  *
- * @class HttpPacket
+ * @class UdpPacket
  * @extends {Packet}
  */
 export class UdpPacket extends Packet {
-
-
     /**
      *Creates an instance of UdpPacket.
      * @param {string} ip robot IP
@@ -31,12 +29,12 @@ export class UdpPacket extends Packet {
      * @returns response containing the response
      * @memberof UdpPacket
      */
-    async send(timeout: number=40): Promise<Response> {
+    async send(timeout: number = 40): Promise<Response> {
         let response: Response;
 
         try {
             response = await axios.get(`http://${this.ip}:${this.port}/${this.query}`, { timeout });
-        } catch(error) {
+        } catch (error) {
             console.error(`Warning: request failed.\n${error}\n`);
             response = this.generateEmptyResponse();
         }
@@ -45,6 +43,6 @@ export class UdpPacket extends Packet {
     }
 
     equals(other: any) {
-        return other instanceof UdpPacket && this.ip == other.ip && this.port == other.port && this.query == other.query;
+        return other instanceof UdpPacket && this.ip === other.ip && this.port === other.port && this.query === other.query;
     }
 }
