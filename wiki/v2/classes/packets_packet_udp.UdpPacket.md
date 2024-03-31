@@ -1,175 +1,230 @@
-
 # Class: UdpPacket
+
+[packets/packet\_udp](../modules/packets_packet_udp.md).UdpPacket
 
 Represents a http data packet
 
+ UdpPacket
+
 ## Hierarchy
 
-* [Packet](_butter_mas_packets_packet_.packet.md)
+- [`Packet`](packets_packet.Packet.md)
 
-  ↳ **UdpPacket**
+  ↳ **`UdpPacket`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](_butter_mas_packets_packet_udp_.udppacket.md#constructor)
+- [constructor](packets_packet_udp.UdpPacket.md#constructor)
 
 ### Properties
 
-* [ip](_butter_mas_packets_packet_udp_.udppacket.md#ip)
-* [port](_butter_mas_packets_packet_udp_.udppacket.md#port)
-* [query](_butter_mas_packets_packet_udp_.udppacket.md#query)
+- [ip](packets_packet_udp.UdpPacket.md#ip)
+- [port](packets_packet_udp.UdpPacket.md#port)
+- [query](packets_packet_udp.UdpPacket.md#query)
 
 ### Methods
 
-* [equals](_butter_mas_packets_packet_udp_.udppacket.md#equals)
-* [generateEmptyResponse](_butter_mas_packets_packet_udp_.udppacket.md#protected-generateemptyresponse)
-* [generateResponse](_butter_mas_packets_packet_udp_.udppacket.md#protected-generateresponse)
-* [send](_butter_mas_packets_packet_udp_.udppacket.md#send)
+- [equals](packets_packet_udp.UdpPacket.md#equals)
+- [generateEmptyResponse](packets_packet_udp.UdpPacket.md#generateemptyresponse)
+- [generateResponse](packets_packet_udp.UdpPacket.md#generateresponse)
+- [send](packets_packet_udp.UdpPacket.md#send)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new UdpPacket**(`ip`: string, `port`: number, `query`: string): *[UdpPacket](_butter_mas_packets_packet_udp_.udppacket.md)*
-
-*Overrides [Packet](_butter_mas_packets_packet_.packet.md).[constructor](_butter_mas_packets_packet_.packet.md#constructor)*
-
-*Defined in [butter/mas/packets/packet_udp.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_udp.ts#L12)*
+• **new UdpPacket**(`ip`, `port`, `query`): [`UdpPacket`](packets_packet_udp.UdpPacket.md)
 
 Creates an instance of UdpPacket.
 
-**`memberof`** UdpPacket
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ip` | `string` | robot IP |
+| `port` | `number` | robot port |
+| `query` | `string` | packet payload |
 
-Name | Type | Description |
------- | ------ | ------ |
-`ip` | string | robot IP |
-`port` | number | robot port |
-`query` | string | packet payload |
+#### Returns
 
-**Returns:** *[UdpPacket](_butter_mas_packets_packet_udp_.udppacket.md)*
+[`UdpPacket`](packets_packet_udp.UdpPacket.md)
+
+**`Memberof`**
+
+UdpPacket
+
+#### Overrides
+
+[Packet](packets_packet.Packet.md).[constructor](packets_packet.Packet.md#constructor)
+
+#### Defined in
+
+[packets/packet_udp.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_udp.ts#L20)
 
 ## Properties
 
-###  ip
+### ip
 
-• **ip**: *string*
+• **ip**: `string`
 
-*Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[ip](_butter_mas_packets_packet_.packet.md#ip)*
+#### Inherited from
 
-*Defined in [butter/mas/packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet.ts#L9)*
+[Packet](packets_packet.Packet.md).[ip](packets_packet.Packet.md#ip)
 
-___
+#### Defined in
 
-###  port
-
-• **port**: *number*
-
-*Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[port](_butter_mas_packets_packet_.packet.md#port)*
-
-*Defined in [butter/mas/packets/packet.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet.ts#L10)*
+[packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L9)
 
 ___
 
-###  query
+### port
 
-• **query**: *string*
+• **port**: `number`
 
-*Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[query](_butter_mas_packets_packet_.packet.md#query)*
+#### Inherited from
 
-*Defined in [butter/mas/packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet.ts#L11)*
+[Packet](packets_packet.Packet.md).[port](packets_packet.Packet.md#port)
+
+#### Defined in
+
+[packets/packet.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L10)
+
+___
+
+### query
+
+• **query**: `string`
+
+#### Inherited from
+
+[Packet](packets_packet.Packet.md).[query](packets_packet.Packet.md#query)
+
+#### Defined in
+
+[packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L11)
 
 ## Methods
 
-###  equals
+### equals
 
-▸ **equals**(`other`: any): *boolean*
+▸ **equals**(`other`): `boolean`
 
-*Overrides [Packet](_butter_mas_packets_packet_.packet.md).[equals](_butter_mas_packets_packet_.packet.md#equals)*
+#### Parameters
 
-*Defined in [butter/mas/packets/packet_udp.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_udp.ts#L47)*
+| Name | Type |
+| :------ | :------ |
+| `other` | `any` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`other` | any |
+`boolean`
 
-**Returns:** *boolean*
+#### Overrides
+
+[Packet](packets_packet.Packet.md).[equals](packets_packet.Packet.md#equals)
+
+#### Defined in
+
+[packets/packet_udp.ts:45](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_udp.ts#L45)
 
 ___
 
-### `Protected` generateEmptyResponse
+### generateEmptyResponse
 
-▸ **generateEmptyResponse**(`error`: any, `errorType`: string): *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
-
-*Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[generateEmptyResponse](_butter_mas_packets_packet_.packet.md#protected-generateemptyresponse)*
-
-*Defined in [butter/mas/packets/packet.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet.ts#L76)*
+▸ **generateEmptyResponse**(`error?`, `errorType?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Generates empty response packet
 
-**`memberof`** Packet
-/**
+#### Parameters
 
-**`memberof`** Packet
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `error?` | `any` | `null` |  |
+| `errorType?` | `string` | `'unknown'` | error type |
 
-**Parameters:**
+#### Returns
 
-Name | Type | Default |
------- | ------ | ------ |
-`error` | any | null |
-`errorType` | string | "unknown" |
-
-**Returns:** *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 error response
 
+**`Memberof`**
+
+Packet
+/**
+
+**`Memberof`**
+
+Packet
+
+#### Inherited from
+
+[Packet](packets_packet.Packet.md).[generateEmptyResponse](packets_packet.Packet.md#generateemptyresponse)
+
+#### Defined in
+
+[packets/packet.ts:74](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L74)
+
 ___
 
-### `Protected` generateResponse
+### generateResponse
 
-▸ **generateResponse**(`content`: [ResponseData](../interfaces/_butter_mas_interfaces_response_.responsedata.md)): *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
+▸ **generateResponse**(`content`): [`Response`](../interfaces/interfaces_response.Response.md)
 
-*Inherited from [Packet](_butter_mas_packets_packet_.packet.md).[generateResponse](_butter_mas_packets_packet_.packet.md#protected-generateresponse)*
+#### Parameters
 
-*Defined in [butter/mas/packets/packet.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet.ts#L47)*
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `content` | [`ResponseData`](../interfaces/interfaces_response.ResponseData.md) | response content |
 
-**`memberof`** Packet
+#### Returns
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`content` | [ResponseData](../interfaces/_butter_mas_interfaces_response_.responsedata.md) | response content |
-
-**Returns:** *[Response](../interfaces/_butter_mas_interfaces_response_.response.md)*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 structured response
 
+**`Memberof`**
+
+Packet
+
+#### Inherited from
+
+[Packet](packets_packet.Packet.md).[generateResponse](packets_packet.Packet.md#generateresponse)
+
+#### Defined in
+
+[packets/packet.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L47)
+
 ___
 
-###  send
+### send
 
-▸ **send**(`timeout`: number): *Promise‹[Response](../interfaces/_butter_mas_interfaces_response_.response.md)›*
-
-*Overrides [Packet](_butter_mas_packets_packet_.packet.md).[send](_butter_mas_packets_packet_.packet.md#send)*
-
-*Defined in [butter/mas/packets/packet_udp.ts:34](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_udp.ts#L34)*
+▸ **send**(`timeout?`): `Promise`\<[`Response`](../interfaces/interfaces_response.Response.md)\>
 
 Send packet
 
-**`memberof`** UdpPacket
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `timeout?` | `number` | `40` | packet timeout (optional) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`timeout` | number | 40 |
+#### Returns
 
-**Returns:** *Promise‹[Response](../interfaces/_butter_mas_interfaces_response_.response.md)›*
+`Promise`\<[`Response`](../interfaces/interfaces_response.Response.md)\>
 
 response containing the response
+
+**`Memberof`**
+
+UdpPacket
+
+#### Overrides
+
+[Packet](packets_packet.Packet.md).[send](packets_packet.Packet.md#send)
+
+#### Defined in
+
+[packets/packet_udp.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_udp.ts#L32)

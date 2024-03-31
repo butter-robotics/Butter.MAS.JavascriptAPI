@@ -1,8 +1,7 @@
+# Module: packets/packet\_builder
 
-# Module: "butter/mas/packets/packet_builder"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [PacketBuilder](../classes/_butter_mas_packets_packet_builder_.packetbuilder.md)
+- [PacketBuilder](../classes/packets_packet_builder.PacketBuilder.md)

@@ -1,284 +1,351 @@
-
 # Class: PacketBuilder
+
+[packets/packet\_builder](../modules/packets_packet_builder.md).PacketBuilder
 
 Builds a command packet using the builder design pattern
 
-## Hierarchy
+ PacketBuilder
 
-* **PacketBuilder**
-
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](_butter_mas_packets_packet_builder_.packetbuilder.md#constructor)
+- [constructor](packets_packet_builder.PacketBuilder.md#constructor)
 
 ### Properties
 
-* [args](_butter_mas_packets_packet_builder_.packetbuilder.md#args)
-* [cmd](_butter_mas_packets_packet_builder_.packetbuilder.md#cmd)
-* [ip](_butter_mas_packets_packet_builder_.packetbuilder.md#ip)
-* [keys](_butter_mas_packets_packet_builder_.packetbuilder.md#keys)
-* [packet](_butter_mas_packets_packet_builder_.packetbuilder.md#packet)
-* [params](_butter_mas_packets_packet_builder_.packetbuilder.md#params)
-* [port](_butter_mas_packets_packet_builder_.packetbuilder.md#port)
+- [args](packets_packet_builder.PacketBuilder.md#args)
+- [cmd](packets_packet_builder.PacketBuilder.md#cmd)
+- [ip](packets_packet_builder.PacketBuilder.md#ip)
+- [keys](packets_packet_builder.PacketBuilder.md#keys)
+- [packet](packets_packet_builder.PacketBuilder.md#packet)
+- [params](packets_packet_builder.PacketBuilder.md#params)
+- [port](packets_packet_builder.PacketBuilder.md#port)
 
 ### Methods
 
-* [_formatParameter](_butter_mas_packets_packet_builder_.packetbuilder.md#private-_formatparameter)
-* [addArgument](_butter_mas_packets_packet_builder_.packetbuilder.md#addargument)
-* [addArguments](_butter_mas_packets_packet_builder_.packetbuilder.md#addarguments)
-* [addCommand](_butter_mas_packets_packet_builder_.packetbuilder.md#addcommand)
-* [addKeyValuePair](_butter_mas_packets_packet_builder_.packetbuilder.md#addkeyvaluepair)
-* [addParameter](_butter_mas_packets_packet_builder_.packetbuilder.md#addparameter)
-* [addParameters](_butter_mas_packets_packet_builder_.packetbuilder.md#addparameters)
-* [build](_butter_mas_packets_packet_builder_.packetbuilder.md#build)
+- [\_formatParameter](packets_packet_builder.PacketBuilder.md#_formatparameter)
+- [addArgument](packets_packet_builder.PacketBuilder.md#addargument)
+- [addArguments](packets_packet_builder.PacketBuilder.md#addarguments)
+- [addCommand](packets_packet_builder.PacketBuilder.md#addcommand)
+- [addKeyValuePair](packets_packet_builder.PacketBuilder.md#addkeyvaluepair)
+- [addParameter](packets_packet_builder.PacketBuilder.md#addparameter)
+- [addParameters](packets_packet_builder.PacketBuilder.md#addparameters)
+- [build](packets_packet_builder.PacketBuilder.md#build)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new PacketBuilder**(`ip`: string, `port`: number, `protocol`: string): *[PacketBuilder](_butter_mas_packets_packet_builder_.packetbuilder.md)*
-
-*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L17)*
+• **new PacketBuilder**(`ip`, `port`, `protocol?`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Creates an instance of PacketBuilder.
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `ip` | `string` | `undefined` | robot IP |
+| `port` | `number` | `undefined` | robot port |
+| `protocol?` | `string` | `'http'` | communication protocol |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`ip` | string | - | robot IP |
-`port` | number | - | robot port |
-`protocol` | string | "http" | - |
+#### Returns
 
-**Returns:** *[PacketBuilder](_butter_mas_packets_packet_builder_.packetbuilder.md)*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
+
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:26](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L26)
 
 ## Properties
 
-###  args
+### args
 
-• **args**: *Array‹string›*
+• **args**: `string`[]
 
-*Defined in [butter/mas/packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L15)*
+#### Defined in
 
-___
-
-###  cmd
-
-• **cmd**: *string*
-
-*Defined in [butter/mas/packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L14)*
+[packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L15)
 
 ___
 
-###  ip
+### cmd
 
-• **ip**: *string*
+• **cmd**: `string`
 
-*Defined in [butter/mas/packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L10)*
+#### Defined in
 
-___
-
-###  keys
-
-• **keys**: *Map‹string, string›*
-
-*Defined in [butter/mas/packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L17)*
+[packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L14)
 
 ___
 
-###  packet
+### ip
 
-• **packet**: *any*
+• **ip**: `string`
 
-*Defined in [butter/mas/packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L12)*
+#### Defined in
 
-___
-
-###  params
-
-• **params**: *Array‹string›*
-
-*Defined in [butter/mas/packets/packet_builder.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L16)*
+[packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L10)
 
 ___
 
-###  port
+### keys
 
-• **port**: *number*
+• **keys**: `Map`\<`string`, `string`\>
 
-*Defined in [butter/mas/packets/packet_builder.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L11)*
+#### Defined in
+
+[packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L17)
+
+___
+
+### packet
+
+• **packet**: `any`
+
+#### Defined in
+
+[packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L12)
+
+___
+
+### params
+
+• **params**: `string`[]
+
+#### Defined in
+
+[packets/packet_builder.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L16)
+
+___
+
+### port
+
+• **port**: `number`
+
+#### Defined in
+
+[packets/packet_builder.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L11)
 
 ## Methods
 
-### `Private` _formatParameter
+### \_formatParameter
 
-▸ **_formatParameter**(`parameter`: string): *string*
-
-*Defined in [butter/mas/packets/packet_builder.ts:144](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L144)*
+▸ **_formatParameter**(`parameter`): `string`
 
 Formats parameter properly
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `parameter` | `string` |
 
-Name | Type |
------- | ------ |
-`parameter` | string |
+#### Returns
 
-**Returns:** *string*
+`string`
 
 formatted parameter
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:144](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L144)
+
 ___
 
-###  addArgument
+### addArgument
 
-▸ **addArgument**(`argument`: string | number | boolean): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:61](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L61)*
+▸ **addArgument**(`argument`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add argument
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `argument` | `string` \| `number` \| `boolean` |
 
-Name | Type |
------- | ------ |
-`argument` | string &#124; number &#124; boolean |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:61](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L61)
+
 ___
 
-###  addArguments
+### addArguments
 
-▸ **addArguments**(...`argumentss`: Array‹string | number | boolean›): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L76)*
+▸ **addArguments**(`...argumentss`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add arguments
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `...argumentss` | (`string` \| `number` \| `boolean`)[] |
 
-Name | Type |
------- | ------ |
-`...argumentss` | Array‹string &#124; number &#124; boolean› |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L76)
+
 ___
 
-###  addCommand
+### addCommand
 
-▸ **addCommand**(`command`: string): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L47)*
+▸ **addCommand**(`command`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add command
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `command` | `string` |
 
-Name | Type |
------- | ------ |
-`command` | string |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L47)
+
 ___
 
-###  addKeyValuePair
+### addKeyValuePair
 
-▸ **addKeyValuePair**(`key`: string, `value`: string | number | boolean): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:127](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L127)*
+▸ **addKeyValuePair**(`key`, `value`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add key value pair
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `key` | `string` | attribute key |
+| `value` | `string` \| `number` \| `boolean` | attribute value |
 
-Name | Type | Description |
------- | ------ | ------ |
-`key` | string | attribute key |
-`value` | string &#124; number &#124; boolean | attribute value |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:127](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L127)
+
 ___
 
-###  addParameter
+### addParameter
 
-▸ **addParameter**(`parameter`: string): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:94](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L94)*
+▸ **addParameter**(`parameter`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add parameter
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `parameter` | `string` |
 
-Name | Type |
------- | ------ |
-`parameter` | string |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:94](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L94)
+
 ___
 
-###  addParameters
+### addParameters
 
-▸ **addParameters**(...`parameters`: Array‹string›): *this*
-
-*Defined in [butter/mas/packets/packet_builder.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L108)*
+▸ **addParameters**(`...parameters`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Add parameters
 
-**`memberof`** PacketBuilder
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `...parameters` | `string`[] |
 
-Name | Type |
------- | ------ |
-`...parameters` | Array‹string› |
+#### Returns
 
-**Returns:** *this*
+[`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 this PacketBuilder
 
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L108)
+
 ___
 
-###  build
+### build
 
-▸ **build**(): *any*
-
-*Defined in [butter/mas/packets/packet_builder.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_builder.ts#L166)*
+▸ **build**(): `any`
 
 Builds the packet
 
-**`memberof`** PacketBuilder
+#### Returns
 
-**Returns:** *any*
+`any`
 
 data packet
+
+**`Memberof`**
+
+PacketBuilder
+
+#### Defined in
+
+[packets/packet_builder.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L166)

@@ -1,8 +1,7 @@
+# Module: packets/packet\_tcp
 
-# Module: "butter/mas/packets/packet_tcp"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [TcpPacket](../classes/_butter_mas_packets_packet_tcp_.tcppacket.md)
+- [TcpPacket](../classes/packets_packet_tcp.TcpPacket.md)

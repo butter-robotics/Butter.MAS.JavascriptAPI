@@ -1,15 +1,8 @@
-
-# Butter MAS Javascript API Documentation
-
 # Butter MAS Javascript API
 HTTP client javascript API for Butter MAS platform.
 
 [![licence](https://img.shields.io/github/license/butter-robotics/Butter.MAS.JavascriptAPI.svg)](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 ![npm](https://img.shields.io/npm/v/@butter-robotics/mas-javascript-api)
-
-___
-🚧**NOTE:** this repository is still a work in progress.
-___
 
 ## Getting Started
 
@@ -32,7 +25,7 @@ butterHttpClient.playAnimation('jump').then(response => console.log(response.dat
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://butter-robotics.github.io/Butter.MAS.JavascriptAPI/),
+- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_javascript_api),
 <!-- (https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/API.md), -->
 - 🖋  [Licence](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 <!-- - 👩🏼‍🏫 [Examples](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/examples),   -->

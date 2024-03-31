@@ -1,56 +1,63 @@
-
 # Interface: MetadataDataPacket
 
-## Hierarchy
+[interfaces/response](../modules/interfaces_response.md).MetadataDataPacket
 
-* **MetadataDataPacket**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [asynchronous](_butter_mas_interfaces_response_.metadatadatapacket.md#optional-asynchronous)
-* [duration](_butter_mas_interfaces_response_.metadatadatapacket.md#duration)
-* [exception](_butter_mas_interfaces_response_.metadatadatapacket.md#optional-exception)
-* [handler](_butter_mas_interfaces_response_.metadatadatapacket.md#handler)
-* [timestamp](_butter_mas_interfaces_response_.metadatadatapacket.md#timestamp)
+- [asynchronous](interfaces_response.MetadataDataPacket.md#asynchronous)
+- [duration](interfaces_response.MetadataDataPacket.md#duration)
+- [exception](interfaces_response.MetadataDataPacket.md#exception)
+- [handler](interfaces_response.MetadataDataPacket.md#handler)
+- [timestamp](interfaces_response.MetadataDataPacket.md#timestamp)
 
 ## Properties
 
-### `Optional` asynchronous
+### asynchronous
 
-• **asynchronous**? : *boolean*
+• `Optional` **asynchronous**: `boolean`
 
-*Defined in [butter/mas/interfaces/response.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L14)*
+#### Defined in
 
-___
-
-###  duration
-
-• **duration**: *number*
-
-*Defined in [butter/mas/interfaces/response.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L17)*
+[interfaces/response.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L3)
 
 ___
 
-### `Optional` exception
+### duration
 
-• **exception**? : *string*
+• **duration**: `number`
 
-*Defined in [butter/mas/interfaces/response.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L15)*
+#### Defined in
 
-___
-
-###  handler
-
-• **handler**: *string*
-
-*Defined in [butter/mas/interfaces/response.ts:13](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L13)*
+[interfaces/response.ts:6](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L6)
 
 ___
 
-###  timestamp
+### exception
 
-• **timestamp**: *number*
+• `Optional` **exception**: `string`
 
-*Defined in [butter/mas/interfaces/response.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L16)*
+#### Defined in
+
+[interfaces/response.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L4)
+
+___
+
+### handler
+
+• **handler**: `string`
+
+#### Defined in
+
+[interfaces/response.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L2)
+
+___
+
+### timestamp
+
+• **timestamp**: `number`
+
+#### Defined in
+
+[interfaces/response.ts:5](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L5)

@@ -1,8 +1,7 @@
+# Module: clients/client
 
-# Module: "butter/mas/clients/client"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [Client](../classes/_butter_mas_clients_client_.client.md)
+- [Client](../classes/clients_client.Client.md)

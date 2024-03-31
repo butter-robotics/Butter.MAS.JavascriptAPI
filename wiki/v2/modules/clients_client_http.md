@@ -1,8 +1,7 @@
+# Module: clients/client\_http
 
-# Module: "butter/mas/clients/client_http"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [HttpClient](../classes/_butter_mas_clients_client_http_.httpclient.md)
+- [HttpClient](../classes/clients_client_http.HttpClient.md)

@@ -1,561 +1,752 @@
-
 # Class: TcpClient
+
+[clients/client\_tcp](../modules/clients_client_tcp.md).TcpClient
 
 Butter MAS TCP client API
 
+ TcpClient
+
 ## Hierarchy
 
-* [Client](_butter_mas_clients_client_.client.md)
+- [`Client`](clients_client.Client.md)
 
-  ↳ **TcpClient**
+  ↳ **`TcpClient`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](_butter_mas_clients_client_tcp_.tcpclient.md#constructor)
+- [constructor](clients_client_tcp.TcpClient.md#constructor)
 
 ### Properties
 
-* [ip](_butter_mas_clients_client_tcp_.tcpclient.md#ip)
-* [port](_butter_mas_clients_client_tcp_.tcpclient.md#port)
-* [protocol](_butter_mas_clients_client_tcp_.tcpclient.md#protocol)
+- [ip](clients_client_tcp.TcpClient.md#ip)
+- [port](clients_client_tcp.TcpClient.md#port)
+- [protocol](clients_client_tcp.TcpClient.md#protocol)
 
 ### Accessors
 
-* [timeout](_butter_mas_clients_client_tcp_.tcpclient.md#timeout)
+- [timeout](clients_client_tcp.TcpClient.md#timeout)
 
 ### Methods
 
-* [clearAnimation](_butter_mas_clients_client_tcp_.tcpclient.md#clearanimation)
-* [getAvailableAnimations](_butter_mas_clients_client_tcp_.tcpclient.md#getavailableanimations)
-* [getAvailableHandlers](_butter_mas_clients_client_tcp_.tcpclient.md#getavailablehandlers)
-* [getAvailableMotorRegisters](_butter_mas_clients_client_tcp_.tcpclient.md#getavailablemotorregisters)
-* [getAvailableSounds](_butter_mas_clients_client_tcp_.tcpclient.md#getavailablesounds)
-* [getMotorRegister](_butter_mas_clients_client_tcp_.tcpclient.md#getmotorregister)
-* [getMotorRegisterRange](_butter_mas_clients_client_tcp_.tcpclient.md#getmotorregisterrange)
-* [moveMotorInDirection](_butter_mas_clients_client_tcp_.tcpclient.md#movemotorindirection)
-* [moveMotorInTime](_butter_mas_clients_client_tcp_.tcpclient.md#movemotorintime)
-* [moveMotorToPosition](_butter_mas_clients_client_tcp_.tcpclient.md#movemotortoposition)
-* [pauseAnimation](_butter_mas_clients_client_tcp_.tcpclient.md#pauseanimation)
-* [pauseAudio](_butter_mas_clients_client_tcp_.tcpclient.md#pauseaudio)
-* [playAnimation](_butter_mas_clients_client_tcp_.tcpclient.md#playanimation)
-* [playAudio](_butter_mas_clients_client_tcp_.tcpclient.md#playaudio)
-* [resumeAnimation](_butter_mas_clients_client_tcp_.tcpclient.md#resumeanimation)
-* [resumeAudio](_butter_mas_clients_client_tcp_.tcpclient.md#resumeaudio)
-* [setMotorRegister](_butter_mas_clients_client_tcp_.tcpclient.md#setmotorregister)
-* [stopAnimation](_butter_mas_clients_client_tcp_.tcpclient.md#stopanimation)
-* [stopAudio](_butter_mas_clients_client_tcp_.tcpclient.md#stopaudio)
+- [clearAnimation](clients_client_tcp.TcpClient.md#clearanimation)
+- [getAvailableAnimations](clients_client_tcp.TcpClient.md#getavailableanimations)
+- [getAvailableHandlers](clients_client_tcp.TcpClient.md#getavailablehandlers)
+- [getAvailableMotorRegisters](clients_client_tcp.TcpClient.md#getavailablemotorregisters)
+- [getAvailableSounds](clients_client_tcp.TcpClient.md#getavailablesounds)
+- [getMotorRegister](clients_client_tcp.TcpClient.md#getmotorregister)
+- [getMotorRegisterRange](clients_client_tcp.TcpClient.md#getmotorregisterrange)
+- [moveMotorInDirection](clients_client_tcp.TcpClient.md#movemotorindirection)
+- [moveMotorInTime](clients_client_tcp.TcpClient.md#movemotorintime)
+- [moveMotorToPosition](clients_client_tcp.TcpClient.md#movemotortoposition)
+- [pauseAnimation](clients_client_tcp.TcpClient.md#pauseanimation)
+- [pauseAudio](clients_client_tcp.TcpClient.md#pauseaudio)
+- [playAnimation](clients_client_tcp.TcpClient.md#playanimation)
+- [playAudio](clients_client_tcp.TcpClient.md#playaudio)
+- [resumeAnimation](clients_client_tcp.TcpClient.md#resumeanimation)
+- [resumeAudio](clients_client_tcp.TcpClient.md#resumeaudio)
+- [setMotorRegister](clients_client_tcp.TcpClient.md#setmotorregister)
+- [stopAnimation](clients_client_tcp.TcpClient.md#stopanimation)
+- [stopAudio](clients_client_tcp.TcpClient.md#stopaudio)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new TcpClient**(`ip`: string, `port`: number, `protocol`: string): *[TcpClient](_butter_mas_clients_client_tcp_.tcpclient.md)*
-
-*Overrides [Client](_butter_mas_clients_client_.client.md).[constructor](_butter_mas_clients_client_.client.md#constructor)*
-
-*Defined in [butter/mas/clients/client_tcp.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client_tcp.ts#L9)*
+• **new TcpClient**(`ip`, `port?`, `protocol?`): [`TcpClient`](clients_client_tcp.TcpClient.md)
 
 Creates an instance of TcpClient.
 
-**`memberof`** TcpClient
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `ip` | `string` | `undefined` |
+| `port?` | `number` | `3003` |
+| `protocol?` | `string` | `'tcp'` |
 
-Name | Type | Default |
------- | ------ | ------ |
-`ip` | string | - |
-`port` | number | 3003 |
-`protocol` | string | "tcp" |
+#### Returns
 
-**Returns:** *[TcpClient](_butter_mas_clients_client_tcp_.tcpclient.md)*
+[`TcpClient`](clients_client_tcp.TcpClient.md)
+
+**`Memberof`**
+
+TcpClient
+
+#### Overrides
+
+[Client](clients_client.Client.md).[constructor](clients_client.Client.md#constructor)
+
+#### Defined in
+
+[clients/client_tcp.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client_tcp.ts#L17)
 
 ## Properties
 
-###  ip
+### ip
 
-• **ip**: *string*
+• **ip**: `string`
 
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[ip](_butter_mas_clients_client_.client.md#ip)*
+#### Inherited from
 
-*Defined in [butter/mas/clients/client.ts:6](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L6)*
+[Client](clients_client.Client.md).[ip](clients_client.Client.md#ip)
 
-___
+#### Defined in
 
-###  port
-
-• **port**: *number*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[port](_butter_mas_clients_client_.client.md#port)*
-
-*Defined in [butter/mas/clients/client.ts:7](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L7)*
+[clients/client.ts:7](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L7)
 
 ___
 
-###  protocol
+### port
 
-• **protocol**: *string*
+• **port**: `number`
 
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[protocol](_butter_mas_clients_client_.client.md#protocol)*
+#### Inherited from
 
-*Defined in [butter/mas/clients/client.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L8)*
+[Client](clients_client.Client.md).[port](clients_client.Client.md#port)
+
+#### Defined in
+
+[clients/client.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L8)
+
+___
+
+### protocol
+
+• **protocol**: `string`
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[protocol](clients_client.Client.md#protocol)
+
+#### Defined in
+
+[clients/client.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L9)
 
 ## Accessors
 
-###  timeout
+### timeout
 
-• **get timeout**(): *number*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[timeout](_butter_mas_clients_client_.client.md#timeout)*
-
-*Defined in [butter/mas/clients/client.ts:31](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L31)*
+• `get` **timeout**(): `number`
 
 Get command execution timeout (in milliseconds)
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *number*
+`number`
 
-• **set timeout**(`timeout`: number): *void*
+**`Memberof`**
 
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[timeout](_butter_mas_clients_client_.client.md#timeout)*
+Client
 
-*Defined in [butter/mas/clients/client.ts:41](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L41)*
+#### Inherited from
+
+Client.timeout
+
+#### Defined in
+
+[clients/client.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L32)
+
+• `set` **timeout**(`timeout`): `void`
 
 Set time for the command execution
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `timeout` | `number` | command execution timeout in milliseconds |
 
-Name | Type | Description |
------- | ------ | ------ |
-`timeout` | number | command execution timeout in milliseconds |
+#### Returns
 
-**Returns:** *void*
+`void`
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+Client.timeout
+
+#### Defined in
+
+[clients/client.ts:42](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L42)
 
 ## Methods
 
-###  clearAnimation
+### clearAnimation
 
-▸ **clearAnimation**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[clearAnimation](_butter_mas_clients_client_.client.md#clearanimation)*
-
-*Defined in [butter/mas/clients/client.ts:345](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L345)*
+▸ **clearAnimation**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Clear animation queue (if present)
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[clearAnimation](clients_client.Client.md#clearanimation)
+
+#### Defined in
+
+[clients/client.ts:349](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L349)
+
 ___
 
-###  getAvailableAnimations
+### getAvailableAnimations
 
-▸ **getAvailableAnimations**(`reload`: boolean): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getAvailableAnimations](_butter_mas_clients_client_.client.md#getavailableanimations)*
-
-*Defined in [butter/mas/clients/client.ts:69](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L69)*
+▸ **getAvailableAnimations**(`reload?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get available (loaded) robot animations
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `reload?` | `boolean` | `false` |
 
-Name | Type | Default |
------- | ------ | ------ |
-`reload` | boolean | false |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing all the available (loaded) robot animations
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getAvailableAnimations](clients_client.Client.md#getavailableanimations)
+
+#### Defined in
+
+[clients/client.ts:70](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L70)
+
 ___
 
-###  getAvailableHandlers
+### getAvailableHandlers
 
-▸ **getAvailableHandlers**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getAvailableHandlers](_butter_mas_clients_client_.client.md#getavailablehandlers)*
-
-*Defined in [butter/mas/clients/client.ts:55](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L55)*
+▸ **getAvailableHandlers**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get available robot handlers
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing all the available robot handlers
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getAvailableHandlers](clients_client.Client.md#getavailablehandlers)
+
+#### Defined in
+
+[clients/client.ts:56](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L56)
+
 ___
 
-###  getAvailableMotorRegisters
+### getAvailableMotorRegisters
 
-▸ **getAvailableMotorRegisters**(`motorName`: string, `readableOnly`: boolean): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getAvailableMotorRegisters](_butter_mas_clients_client_.client.md#getavailablemotorregisters)*
-
-*Defined in [butter/mas/clients/client.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L108)*
+▸ **getAvailableMotorRegisters**(`motorName`, `readableOnly?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get all available motor registers (for Dynamixel motors only)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `motorName` | `string` | `undefined` | motor name (as configured on the configurator) |
+| `readableOnly?` | `boolean` | `false` | get readable registers only |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`motorName` | string | - | motor name (as configured on the configurator) |
-`readableOnly` | boolean | false | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing all the available motor registers
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getAvailableMotorRegisters](clients_client.Client.md#getavailablemotorregisters)
+
+#### Defined in
+
+[clients/client.ts:111](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L111)
+
 ___
 
-###  getAvailableSounds
+### getAvailableSounds
 
-▸ **getAvailableSounds**(`reload`: boolean): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getAvailableSounds](_butter_mas_clients_client_.client.md#getavailablesounds)*
-
-*Defined in [butter/mas/clients/client.ts:88](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L88)*
+▸ **getAvailableSounds**(`reload?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get available (loaded) robot sound assets
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `reload?` | `boolean` | `false` |
 
-Name | Type | Default |
------- | ------ | ------ |
-`reload` | boolean | false |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing all the available (loaded) robot sound assets
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getAvailableSounds](clients_client.Client.md#getavailablesounds)
+
+#### Defined in
+
+[clients/client.ts:90](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L90)
+
 ___
 
-###  getMotorRegister
+### getMotorRegister
 
-▸ **getMotorRegister**(`motorName`: string, `registerName`: string): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getMotorRegister](_butter_mas_clients_client_.client.md#getmotorregister)*
-
-*Defined in [butter/mas/clients/client.ts:128](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L128)*
+▸ **getMotorRegister**(`motorName`, `registerName`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get motor register value (for Dynamixel motors only)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `motorName` | `string` | motor name (as configured on the configurator) |
+| `registerName` | `string` |  |
 
-Name | Type | Description |
------- | ------ | ------ |
-`motorName` | string | motor name (as configured on the configurator) |
-`registerName` | string | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing register value
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getMotorRegister](clients_client.Client.md#getmotorregister)
+
+#### Defined in
+
+[clients/client.ts:131](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L131)
+
 ___
 
-###  getMotorRegisterRange
+### getMotorRegisterRange
 
-▸ **getMotorRegisterRange**(`motorName`: string, `registerName`: string): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[getMotorRegisterRange](_butter_mas_clients_client_.client.md#getmotorregisterrange)*
-
-*Defined in [butter/mas/clients/client.ts:146](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L146)*
+▸ **getMotorRegisterRange**(`motorName`, `registerName`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get motor register value range (for Dynamixel motors only)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `motorName` | `string` | motor name (as configured on the configurator) |
+| `registerName` | `string` |  |
 
-Name | Type | Description |
------- | ------ | ------ |
-`motorName` | string | motor name (as configured on the configurator) |
-`registerName` | string | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing register range value
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[getMotorRegisterRange](clients_client.Client.md#getmotorregisterrange)
+
+#### Defined in
+
+[clients/client.ts:149](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L149)
+
 ___
 
-###  moveMotorInDirection
+### moveMotorInDirection
 
-▸ **moveMotorInDirection**(`motorName`: string, `direction`: string, `velocity?`: number, `units`: [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits)): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[moveMotorInDirection](_butter_mas_clients_client_.client.md#movemotorindirection)*
-
-*Defined in [butter/mas/clients/client.ts:232](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L232)*
+▸ **moveMotorInDirection**(`motorName`, `direction`, `velocity?`, `units?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Move motor to a certain direction (relative to the motor's current position)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `motorName` | `string` | `undefined` | motor name (as configured on the configurator) |
+| `direction` | `string` | `undefined` | motor movement direction (left, right, stop) |
+| `velocity?` | `number` | `undefined` | motor movement speed (in units / sec) |
+| `units?` | [`RotationUnits`](../modules/interfaces_types.md#rotationunits) | `'radians'` | rotation units |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`motorName` | string | - | motor name (as configured on the configurator) |
-`direction` | string | - | motor movement direction (left, right, stop) |
-`velocity?` | number | - | - |
-`units` | [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits) | "radians" | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[moveMotorInDirection](clients_client.Client.md#movemotorindirection)
+
+#### Defined in
+
+[clients/client.ts:235](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L235)
+
 ___
 
-###  moveMotorInTime
+### moveMotorInTime
 
-▸ **moveMotorInTime**(`motorName`: string, `position`: number, `duration`: number, `units`: [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits)): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[moveMotorInTime](_butter_mas_clients_client_.client.md#movemotorintime)*
-
-*Defined in [butter/mas/clients/client.ts:210](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L210)*
+▸ **moveMotorInTime**(`motorName`, `position`, `duration`, `units?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Move motor to a certain position (relative to the motor's zero position) in fixed duration
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `motorName` | `string` | `undefined` | motor name (as configured on the configurator) |
+| `position` | `number` | `undefined` | motor final position (in units) |
+| `duration` | `number` | `undefined` | motor movement duration (in milliseconds) |
+| `units?` | [`RotationUnits`](../modules/interfaces_types.md#rotationunits) | `'radians'` | rotation units |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`motorName` | string | - | motor name (as configured on the configurator) |
-`position` | number | - | motor final position (in units) |
-`duration` | number | - | motor movement duration (in milliseconds) |
-`units` | [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits) | "radians" | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[moveMotorInTime](clients_client.Client.md#movemotorintime)
+
+#### Defined in
+
+[clients/client.ts:213](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L213)
+
 ___
 
-###  moveMotorToPosition
+### moveMotorToPosition
 
-▸ **moveMotorToPosition**(`motorName`: string, `position`: number, `velocity?`: number, `acceleration?`: number, `units`: [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits)): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[moveMotorToPosition](_butter_mas_clients_client_.client.md#movemotortoposition)*
-
-*Defined in [butter/mas/clients/client.ts:187](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L187)*
+▸ **moveMotorToPosition**(`motorName`, `position`, `velocity?`, `acceleration?`, `units?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Move motor to a certain position (relative to the motor's zero position)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `motorName` | `string` | `undefined` | motor name (as configured on the configurator) |
+| `position` | `number` | `undefined` | motor final position (in units) |
+| `velocity?` | `number` | `undefined` | motor movement speed (in units / sec) |
+| `acceleration?` | `number` | `undefined` | motor maximal acceleration (in units / sec * sec) |
+| `units?` | [`RotationUnits`](../modules/interfaces_types.md#rotationunits) | `'radians'` | rotation units |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`motorName` | string | - | motor name (as configured on the configurator) |
-`position` | number | - | motor final position (in units) |
-`velocity?` | number | - | - |
-`acceleration?` | number | - | - |
-`units` | [RotationUnits](../modules/_butter_mas_interfaces_types_.md#rotationunits) | "radians" | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[moveMotorToPosition](clients_client.Client.md#movemotortoposition)
+
+#### Defined in
+
+[clients/client.ts:190](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L190)
+
 ___
 
-###  pauseAnimation
+### pauseAnimation
 
-▸ **pauseAnimation**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[pauseAnimation](_butter_mas_clients_client_.client.md#pauseanimation)*
-
-*Defined in [butter/mas/clients/client.ts:297](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L297)*
+▸ **pauseAnimation**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Pause currently playing animation (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[pauseAnimation](clients_client.Client.md#pauseanimation)
+
+#### Defined in
+
+[clients/client.ts:301](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L301)
+
 ___
 
-###  pauseAudio
+### pauseAudio
 
-▸ **pauseAudio**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[pauseAudio](_butter_mas_clients_client_.client.md#pauseaudio)*
-
-*Defined in [butter/mas/clients/client.ts:378](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L378)*
+▸ **pauseAudio**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Pause current audio playback (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[pauseAudio](clients_client.Client.md#pauseaudio)
+
+#### Defined in
+
+[clients/client.ts:382](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L382)
+
 ___
 
-###  playAnimation
+### playAnimation
 
-▸ **playAnimation**(`animationName`: string, `lenient`: boolean, `relative`: boolean): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[playAnimation](_butter_mas_clients_client_.client.md#playanimation)*
-
-*Defined in [butter/mas/clients/client.ts:279](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L279)*
+▸ **playAnimation**(`animationName`, `lenient?`, `relative?`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Play animation on the robot
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `animationName` | `string` | `undefined` |  |
+| `lenient?` | `boolean` | `false` | wait for current playing animation (if present) to finish |
+| `relative?` | `boolean` | `false` | play animation relative to the current robot position |
 
-Name | Type | Default |
------- | ------ | ------ |
-`animationName` | string | - |
-`lenient` | boolean | false |
-`relative` | boolean | false |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[playAnimation](clients_client.Client.md#playanimation)
+
+#### Defined in
+
+[clients/client.ts:283](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L283)
+
 ___
 
-###  playAudio
+### playAudio
 
-▸ **playAudio**(`fileName`: string): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[playAudio](_butter_mas_clients_client_.client.md#playaudio)*
-
-*Defined in [butter/mas/clients/client.ts:362](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L362)*
+▸ **playAudio**(`fileName`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Play audio on the robot
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `fileName` | `string` | audio asset name |
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileName` | string | audio asset name |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[playAudio](clients_client.Client.md#playaudio)
+
+#### Defined in
+
+[clients/client.ts:366](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L366)
+
 ___
 
-###  resumeAnimation
+### resumeAnimation
 
-▸ **resumeAnimation**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[resumeAnimation](_butter_mas_clients_client_.client.md#resumeanimation)*
-
-*Defined in [butter/mas/clients/client.ts:313](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L313)*
+▸ **resumeAnimation**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Resume currently paused animation (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[resumeAnimation](clients_client.Client.md#resumeanimation)
+
+#### Defined in
+
+[clients/client.ts:317](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L317)
+
 ___
 
-###  resumeAudio
+### resumeAudio
 
-▸ **resumeAudio**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[resumeAudio](_butter_mas_clients_client_.client.md#resumeaudio)*
-
-*Defined in [butter/mas/clients/client.ts:394](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L394)*
+▸ **resumeAudio**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Resume currently paused audio playback (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[resumeAudio](clients_client.Client.md#resumeaudio)
+
+#### Defined in
+
+[clients/client.ts:398](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L398)
+
 ___
 
-###  setMotorRegister
+### setMotorRegister
 
-▸ **setMotorRegister**(`motorName`: string, `registerName`: string, `value`: string): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[setMotorRegister](_butter_mas_clients_client_.client.md#setmotorregister)*
-
-*Defined in [butter/mas/clients/client.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L166)*
+▸ **setMotorRegister**(`motorName`, `registerName`, `value`): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Get motor register value (for Dynamixel motors only)
 
-**`memberof`** Client
+#### Parameters
 
-**Parameters:**
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `motorName` | `string` | motor name (as configured on the configurator) |
+| `registerName` | `string` |  |
+| `value` | `string` |  |
 
-Name | Type | Description |
------- | ------ | ------ |
-`motorName` | string | motor name (as configured on the configurator) |
-`registerName` | string | - |
-`value` | string | - |
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
 
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[setMotorRegister](clients_client.Client.md#setmotorregister)
+
+#### Defined in
+
+[clients/client.ts:169](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L169)
+
 ___
 
-###  stopAnimation
+### stopAnimation
 
-▸ **stopAnimation**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[stopAnimation](_butter_mas_clients_client_.client.md#stopanimation)*
-
-*Defined in [butter/mas/clients/client.ts:329](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L329)*
+▸ **stopAnimation**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Stop currently playing animation (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[stopAnimation](clients_client.Client.md#stopanimation)
+
+#### Defined in
+
+[clients/client.ts:333](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L333)
 
 ___
 
-###  stopAudio
+### stopAudio
 
-▸ **stopAudio**(): *Response*
-
-*Inherited from [Client](_butter_mas_clients_client_.client.md).[stopAudio](_butter_mas_clients_client_.client.md#stopaudio)*
-
-*Defined in [butter/mas/clients/client.ts:410](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/clients/client.ts#L410)*
+▸ **stopAudio**(): [`Response`](../interfaces/interfaces_response.Response.md)
 
 Stop current audio playback (if available) on the robot
 
-**`memberof`** Client
+#### Returns
 
-**Returns:** *Response*
+[`Response`](../interfaces/interfaces_response.Response.md)
 
 response containing execution result
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[stopAudio](clients_client.Client.md#stopaudio)
+
+#### Defined in
+
+[clients/client.ts:414](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L414)

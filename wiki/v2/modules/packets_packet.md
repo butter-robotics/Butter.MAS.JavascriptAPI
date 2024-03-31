@@ -1,8 +1,7 @@
+# Module: packets/packet
 
-# Module: "butter/mas/packets/packet"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [Packet](../classes/_butter_mas_packets_packet_.packet.md)
+- [Packet](../classes/packets_packet.Packet.md)

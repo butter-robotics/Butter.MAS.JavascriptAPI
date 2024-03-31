@@ -1,8 +1,7 @@
+# Module: clients/client\_factory
 
-# Module: "butter/mas/clients/client_factory"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [ClientFactory](../classes/_butter_mas_clients_client_factory_.clientfactory.md)
+- [ClientFactory](../classes/clients_client_factory.ClientFactory.md)

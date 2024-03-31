@@ -1,8 +1,7 @@
+# Module: packets/packet\_factory
 
-# Module: "butter/mas/packets/packet_factory"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [PacketFactory](../classes/_butter_mas_packets_packet_factory_.packetfactory.md)
+- [PacketFactory](../classes/packets_packet_factory.PacketFactory.md)

@@ -1,38 +1,41 @@
-
 # Interface: ResponseData
 
-## Hierarchy
+[interfaces/response](../modules/interfaces_response.md).ResponseData
 
-* **ResponseData**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [executed](_butter_mas_interfaces_response_.responsedata.md#optional-executed)
-* [request](_butter_mas_interfaces_response_.responsedata.md#request)
-* [response](_butter_mas_interfaces_response_.responsedata.md#response)
+- [executed](interfaces_response.ResponseData.md#executed)
+- [request](interfaces_response.ResponseData.md#request)
+- [response](interfaces_response.ResponseData.md#response)
 
 ## Properties
 
-### `Optional` executed
+### executed
 
-• **executed**? : *boolean*
+• `Optional` **executed**: `boolean`
 
-*Defined in [butter/mas/interfaces/response.ts:24](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L24)*
+#### Defined in
 
-___
-
-###  request
-
-• **request**: *[RequestDataPacket](_butter_mas_interfaces_response_.requestdatapacket.md)*
-
-*Defined in [butter/mas/interfaces/response.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L22)*
+[interfaces/response.ts:24](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L24)
 
 ___
 
-###  response
+### request
 
-• **response**: *[ResponseDataPacket](_butter_mas_interfaces_response_.responsedatapacket.md)*
+• **request**: [`RequestDataPacket`](interfaces_response.RequestDataPacket.md)
 
-*Defined in [butter/mas/interfaces/response.ts:23](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L23)*
+#### Defined in
+
+[interfaces/response.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L22)
+
+___
+
+### response
+
+• **response**: [`ResponseDataPacket`](interfaces_response.ResponseDataPacket.md)
+
+#### Defined in
+
+[interfaces/response.ts:23](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L23)

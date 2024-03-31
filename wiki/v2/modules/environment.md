@@ -1,25 +1,28 @@
+# Module: environment
 
-# Module: "butter/mas/environment"
-
-## Index
+## Table of contents
 
 ### Variables
 
-* [__version__](_butter_mas_environment_.md#const-__version__)
-* [app_name](_butter_mas_environment_.md#const-app_name)
+- [\_\_version\_\_](environment.md#__version__)
+- [app\_name](environment.md#app_name)
 
 ## Variables
 
-### `Const` __version__
+### \_\_version\_\_
 
-• **__version__**: *"2.0.0"* = "2.0.0"
+• `Const` **\_\_version\_\_**: ``"2.4.0"``
 
-*Defined in [butter/mas/environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/environment.ts#L1)*
+#### Defined in
+
+[environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/environment.ts#L1)
 
 ___
 
-### `Const` app_name
+### app\_name
 
-• **app_name**: *"@butter-robotics/mas-javascript-api"* = "@butter-robotics/mas-javascript-api"
+• `Const` **app\_name**: ``"@butter-robotics/mas-javascript-api"``
 
-*Defined in [butter/mas/environment.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/environment.ts#L2)*
+#### Defined in
+
+[environment.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/environment.ts#L3)

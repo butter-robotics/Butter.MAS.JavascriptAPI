@@ -1,8 +1,7 @@
+# Module: packets/packet\_udp
 
-# Module: "butter/mas/packets/packet_udp"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [UdpPacket](../classes/_butter_mas_packets_packet_udp_.udppacket.md)
+- [UdpPacket](../classes/packets_packet_udp.UdpPacket.md)

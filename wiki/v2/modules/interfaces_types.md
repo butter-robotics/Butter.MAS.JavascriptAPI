@@ -1,16 +1,17 @@
+# Module: interfaces/types
 
-# Module: "butter/mas/interfaces/types"
+## Table of contents
 
-## Index
+### Type Aliases
 
-### Type aliases
+- [RotationUnits](interfaces_types.md#rotationunits)
 
-* [RotationUnits](_butter_mas_interfaces_types_.md#rotationunits)
+## Type Aliases
 
-## Type aliases
+### RotationUnits
 
-###  RotationUnits
+Ƭ **RotationUnits**: ``"degrees"`` \| ``"radians"``
 
-Ƭ **RotationUnits**: *"degrees" | "radians"*
+#### Defined in
 
-*Defined in [butter/mas/interfaces/types.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/types.ts#L1)*
+[interfaces/types.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/types.ts#L1)

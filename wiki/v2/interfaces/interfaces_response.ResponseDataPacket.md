@@ -1,38 +1,41 @@
-
 # Interface: ResponseDataPacket
 
-## Hierarchy
+[interfaces/response](../modules/interfaces_response.md).ResponseDataPacket
 
-* **ResponseDataPacket**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [data](_butter_mas_interfaces_response_.responsedatapacket.md#data)
-* [metadata](_butter_mas_interfaces_response_.responsedatapacket.md#optional-metadata)
-* [status](_butter_mas_interfaces_response_.responsedatapacket.md#status)
+- [data](interfaces_response.ResponseDataPacket.md#data)
+- [metadata](interfaces_response.ResponseDataPacket.md#metadata)
+- [status](interfaces_response.ResponseDataPacket.md#status)
 
 ## Properties
 
-###  data
+### data
 
-• **data**: *Array‹[ResponseDataPacket](_butter_mas_interfaces_response_.responsedatapacket.md)› | string*
+• **data**: `string` \| [`ResponseDataPacket`](interfaces_response.ResponseDataPacket.md)[]
 
-*Defined in [butter/mas/interfaces/response.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L3)*
+#### Defined in
 
-___
-
-### `Optional` metadata
-
-• **metadata**? : *[MetadataDataPacket](_butter_mas_interfaces_response_.metadatadatapacket.md)*
-
-*Defined in [butter/mas/interfaces/response.ts:4](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L4)*
+[interfaces/response.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L11)
 
 ___
 
-###  status
+### metadata
 
-• **status**: *string*
+• `Optional` **metadata**: [`MetadataDataPacket`](interfaces_response.MetadataDataPacket.md)
 
-*Defined in [butter/mas/interfaces/response.ts:2](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L2)*
+#### Defined in
+
+[interfaces/response.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L12)
+
+___
+
+### status
+
+• **status**: `string`
+
+#### Defined in
+
+[interfaces/response.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L10)

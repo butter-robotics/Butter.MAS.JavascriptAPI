@@ -1,8 +1,7 @@
+# Module: packets/packet\_http
 
-# Module: "butter/mas/packets/packet_http"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [HttpPacket](../classes/_butter_mas_packets_packet_http_.httppacket.md)
+- [HttpPacket](../classes/packets_packet_http.HttpPacket.md)

@@ -1,8 +1,7 @@
+# Module: clients/client\_udp
 
-# Module: "butter/mas/clients/client_udp"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [UdpClient](../classes/_butter_mas_clients_client_udp_.udpclient.md)
+- [UdpClient](../classes/clients_client_udp.UdpClient.md)

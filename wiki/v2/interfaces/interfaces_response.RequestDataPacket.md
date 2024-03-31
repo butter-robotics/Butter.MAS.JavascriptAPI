@@ -1,29 +1,30 @@
-
 # Interface: RequestDataPacket
 
-## Hierarchy
+[interfaces/response](../modules/interfaces_response.md).RequestDataPacket
 
-* **RequestDataPacket**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [parameters](_butter_mas_interfaces_response_.requestdatapacket.md#optional-parameters)
-* [query](_butter_mas_interfaces_response_.requestdatapacket.md#optional-query)
+- [parameters](interfaces_response.RequestDataPacket.md#parameters)
+- [query](interfaces_response.RequestDataPacket.md#query)
 
 ## Properties
 
-### `Optional` parameters
+### parameters
 
-• **parameters**? : *Array‹string›*
+• `Optional` **parameters**: `string`[]
 
-*Defined in [butter/mas/interfaces/response.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L9)*
+#### Defined in
+
+[interfaces/response.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L17)
 
 ___
 
-### `Optional` query
+### query
 
-• **query**? : *string*
+• `Optional` **query**: `string`
 
-*Defined in [butter/mas/interfaces/response.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/interfaces/response.ts#L8)*
+#### Defined in
+
+[interfaces/response.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L16)

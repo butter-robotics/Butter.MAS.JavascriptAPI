@@ -1,60 +1,85 @@
-
 # Class: PacketFactory
+
+[packets/packet\_factory](../modules/packets_packet_factory.md).PacketFactory
 
 Packet factory for different types of protocols
 
-## Hierarchy
+ PacketFactory
 
-* **PacketFactory**
+## Table of contents
 
-## Index
+### Constructors
+
+- [constructor](packets_packet_factory.PacketFactory.md#constructor)
 
 ### Methods
 
-* [getPacket](_butter_mas_packets_packet_factory_.packetfactory.md#getpacket)
-* [getPacketClass](_butter_mas_packets_packet_factory_.packetfactory.md#getpacketclass)
+- [getPacket](packets_packet_factory.PacketFactory.md#getpacket)
+- [getPacketClass](packets_packet_factory.PacketFactory.md#getpacketclass)
+
+## Constructors
+
+### constructor
+
+• **new PacketFactory**(): [`PacketFactory`](packets_packet_factory.PacketFactory.md)
+
+#### Returns
+
+[`PacketFactory`](packets_packet_factory.PacketFactory.md)
 
 ## Methods
 
-###  getPacket
+### getPacket
 
-▸ **getPacket**(`ip`: string, `port`: number, `query`: string, `protocol`: string): *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)‹› | [TcpPacket](_butter_mas_packets_packet_tcp_.tcppacket.md)‹› | [UdpPacket](_butter_mas_packets_packet_udp_.udppacket.md)‹›*
-
-*Defined in [butter/mas/packets/packet_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_factory.ts#L22)*
+▸ **getPacket**(`ip`, `port?`, `query`, `protocol?`): [`HttpPacket`](packets_packet_http.HttpPacket.md) \| [`TcpPacket`](packets_packet_tcp.TcpPacket.md) \| [`UdpPacket`](packets_packet_udp.UdpPacket.md)
 
 Creates new client
 
-**`memberof`** PacketFactory
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `ip` | `string` | `undefined` | robot IP |
+| `port?` | `number` | `undefined` | robot port |
+| `query` | `string` | `undefined` | packet data |
+| `protocol?` | `string` | `'http'` | communication protocol |
 
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`ip` | string | - | robot IP |
-`port` | number | - | - |
-`query` | string | - | packet data |
-`protocol` | string | "http" | - |
+#### Returns
 
-**Returns:** *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)‹› | [TcpPacket](_butter_mas_packets_packet_tcp_.tcppacket.md)‹› | [UdpPacket](_butter_mas_packets_packet_udp_.udppacket.md)‹›*
+[`HttpPacket`](packets_packet_http.HttpPacket.md) \| [`TcpPacket`](packets_packet_tcp.TcpPacket.md) \| [`UdpPacket`](packets_packet_udp.UdpPacket.md)
 
 requested client
 
+**`Memberof`**
+
+PacketFactory
+
+#### Defined in
+
+[packets/packet_factory.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_factory.ts#L21)
+
 ___
 
-###  getPacketClass
+### getPacketClass
 
-▸ **getPacketClass**(`protocol`: string): *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)*
-
-*Defined in [butter/mas/packets/packet_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/2d105e8/butter/mas/packets/packet_factory.ts#L44)*
+▸ **getPacketClass**(`protocol?`): typeof [`HttpPacket`](packets_packet_http.HttpPacket.md)
 
 Get packet class
 
-**`memberof`** PacketFactory
+#### Parameters
 
-**Parameters:**
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `protocol?` | `string` | `'http'` | communication protocol |
 
-Name | Type | Default |
------- | ------ | ------ |
-`protocol` | string | "http" |
+#### Returns
 
-**Returns:** *[HttpPacket](_butter_mas_packets_packet_http_.httppacket.md)*
+typeof [`HttpPacket`](packets_packet_http.HttpPacket.md)
+
+**`Memberof`**
+
+PacketFactory
+
+#### Defined in
+
+[packets/packet_factory.ts:43](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_factory.ts#L43)

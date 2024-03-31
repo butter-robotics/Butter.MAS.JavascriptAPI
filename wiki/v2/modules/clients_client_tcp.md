@@ -1,8 +1,7 @@
+# Module: clients/client\_tcp
 
-# Module: "butter/mas/clients/client_tcp"
-
-## Index
+## Table of contents
 
 ### Classes
 
-* [TcpClient](../classes/_butter_mas_clients_client_tcp_.tcpclient.md)
+- [TcpClient](../classes/clients_client_tcp.TcpClient.md)
