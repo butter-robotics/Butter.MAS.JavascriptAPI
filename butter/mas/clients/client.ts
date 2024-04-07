@@ -306,7 +306,7 @@ export class Client {
 
 
     /**
-     * observe animation status
+     * observe animation status ['ANIMATING', 'QUEUED', 'STOPPED', 'PAUSED', 'IDLE']
      *
      * @param {string} animationName (if non provided, will check global status)
      * @returns response containing execution result
