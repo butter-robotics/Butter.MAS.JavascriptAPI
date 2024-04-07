@@ -293,6 +293,29 @@ export class Client {
 
 
     /**
+     * observe animation status
+     *
+     * @param {string} animationName (if non provided, will check global status)
+     * @returns response containing execution result
+     * @memberof Client
+     */
+    observeAnimation(animationName?: string): Response {
+        const packet = animationName
+                    ? new PacketBuilder(this.ip, this.port, this.protocol)
+                    .addCommand('animate')
+                    .addArgument(animationName)
+                    .addParameter('status')
+                    .build()
+                    : new PacketBuilder(this.ip, this.port, this.protocol)
+                    .addCommand('animate')
+                    .addParameter('status')
+                    .build();
+
+        return packet.send(this._timeout);
+    }
+
+
+    /**
      * Pause currently playing animation (if available) on the robot
      *
      * @returns response containing execution result
@@ -371,6 +394,29 @@ export class Client {
 
         return packet.send(this._timeout);
     }
+
+
+    // /**
+    //  * observe playback status
+    //  *
+    //  * @param {string} fileName (if non provided, will check global status)
+    //  * @returns response containing execution result
+    //  * @memberof Client
+    //  */
+    // observeAudio(fileName?: string): Response {
+    //     const packet = fileName
+    //                 ? new PacketBuilder(this.ip, this.port, this.protocol)
+    //                 .addCommand('audio')
+    //                 .addArgument(fileName)
+    //                 .addParameter('status')
+    //                 .build()
+    //                 : new PacketBuilder(this.ip, this.port, this.protocol)
+    //                 .addCommand('audio')
+    //                 .addParameter('status')
+    //                 .build();
+
+    //     return packet.send(this._timeout);
+    // }
 
 
     /**
