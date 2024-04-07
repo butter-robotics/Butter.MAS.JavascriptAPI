@@ -270,6 +270,19 @@ export class Client {
     //     return packet.send(this._timeout);
     // }
 
+    /**
+     * Play animation sequence on the robot
+     *
+     * @param {Array<string>} animationSequence
+     * @param {boolean} [lenient=false] wait for current playing animation (if present) to finish
+     * @param {boolean} [relative=false] play animation relative to the current robot position
+     * @returns response containing execution result
+     * @memberof Client
+     */
+    playSequence(animationSequence: Array<string>, lenient: boolean = false, relative: boolean = false): Response {
+        return this.playAnimation(animationSequence.join().replace(/\s+/g, ''), lenient, relative);
+    }
+
 
     /**
      * Play animation on the robot
