@@ -25,7 +25,7 @@ butterHttpClient.playAnimation('jump').then(response => console.log(response.dat
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_javascript_api),
+- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_javascript_api)
 <!-- (https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/API.md), -->
 - 🖋  [Licence](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 <!-- - 👩🏼‍🏫 [Examples](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/examples),   -->
