@@ -48,6 +48,25 @@ export class Client {
     }
 
     /**
+     * Validate robot connection and assert link quality
+     * This validation assets minimal lower bound link quality, and do not take worst case scenarios into account
+     * ICMP protocol is assumed to be supported and enabled on the machine network
+     *
+     * @param clientIp this machine ip address
+     * @return Response whether this machine is reachable within the defined link parameter
+     * @memberof Client
+     */
+        assertLinkQuality(clientIp: string): Response {
+            const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+                    .addCommand('network')
+                    .addParameter('ping')
+                    .addKeyValuePair('ip', clientIp)
+                    .addKeyValuePair('timeout', this._timeout)
+                    .build();
+            return packet.send(this._timeout);
+        }
+
+    /**
      * Get available robot handlers
      *
      * @returns response containing all the available robot handlers
