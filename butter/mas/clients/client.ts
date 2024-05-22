@@ -56,15 +56,15 @@ export class Client {
      * @return Response whether this machine is reachable within the defined link parameter
      * @memberof Client
      */
-        assertLinkQuality(clientIp: string): Response {
-            const packet = new PacketBuilder(this.ip, this.port, this.protocol)
-                    .addCommand('network')
-                    .addParameter('ping')
-                    .addKeyValuePair('ip', clientIp)
-                    .addKeyValuePair('timeout', this._timeout)
-                    .build();
-            return packet.send(this._timeout);
-        }
+    assertLinkQuality(clientIp: string): Response {
+        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+                .addCommand('network')
+                .addParameter('ping')
+                .addKeyValuePair('ip', clientIp)
+                .addKeyValuePair('timeout', this._timeout)
+                .build();
+        return packet.send(this._timeout);
+    }
 
     /**
      * Get available robot handlers
