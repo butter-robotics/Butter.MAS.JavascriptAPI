@@ -1,3 +1,4 @@
+import { Client } from './client';
 import { HttpClient } from './client_http';
 import { TcpClient } from './client_tcp';
 import { UdpClient } from './client_udp';
@@ -18,7 +19,7 @@ export class ClientFactory {
      * @returns requested client
      * @memberof ClientFactory
      */
-    getClient(ip: string, port?: number, protocol: string = 'http') {
+    getClient(ip: string, port?: number, protocol: string = 'http'): Client {
         if (protocol === 'http') {
             return port ? new HttpClient(ip, port) : new HttpClient(ip);
         } else if (protocol === 'tcp') {
