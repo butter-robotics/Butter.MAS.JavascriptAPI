@@ -37,7 +37,7 @@ export class PacketFactory {
      * Get packet class
      *
      * @param {string} [protocol="http"] communication protocol
-     * @returns
+     * @returns class of type Packet
      * @memberof PacketFactory
      */
     getPacketClass(protocol: string = 'http') {

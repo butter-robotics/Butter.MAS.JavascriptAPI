@@ -5,7 +5,7 @@ import { Response, ResponseData } from '../interfaces/response';
  *
  * @class Packet
  */
-export class Packet {
+export abstract class Packet {
     ip: string;
     port: number;
     query: string;
@@ -29,15 +29,14 @@ export class Packet {
      * Send packet abstract method
      *
      * @param {number} [timeout] packet timeout (optional)
+     * @returns structured response
      * @memberof Packet
      */
-    send(timeout?: number) {
-        throw new Error('Not Implemented');
-    }
+    abstract send(timeout?: number): Promise<Response>;
 
 
     /**
-     *
+     * Generates response packet
      *
      * @protected
      * @param {ResponseData} content response content
