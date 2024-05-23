@@ -4,6 +4,8 @@ import { Response } from '../api';
 
 export class Client {
     private _timeout: number;
+    private _target: string;
+
     ip: string;
     port: number;
     protocol: string;
@@ -19,6 +21,8 @@ export class Client {
      */
     constructor(ip: string, port: number = 3000, protocol: string = 'http') {
         this._timeout = 40;
+        this._target = PacketBuilder.ANY_TARGET;
+
         this.ip = ip;
         this.port = port;
         this.protocol = protocol;
@@ -48,6 +52,29 @@ export class Client {
     }
 
     /**
+     * Get robot character target
+     *
+     * @memberof Client
+     */
+    get target() {
+        return this._target;
+    }
+
+    /**
+     * Set robot character target
+     *
+     * @param {string} target robot character target
+     * @memberof Client
+     */
+    set target(target: string) {
+        if (typeof target !== 'string' || target.length === 0) {
+            throw new Error('Robot character target most be a non empty string');
+        }
+
+        this._target = target;
+    }
+
+    /**
      * Validate robot connection and assert link quality
      * This validation assets minimal lower bound link quality, and do not take worst case scenarios into account
      * ICMP protocol is assumed to be supported and enabled on the machine network
@@ -57,7 +84,7 @@ export class Client {
      * @memberof Client
      */
     assertLinkQuality(clientIp: string): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                 .addCommand('network')
                 .addParameter('ping')
                 .addKeyValuePair('ip', clientIp)
@@ -73,7 +100,7 @@ export class Client {
      * @memberof Client
      */
     getAvailableHandlers(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('list').build();
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol).addCommand('list').build();
 
         return packet.send(this._timeout);
     }
@@ -87,7 +114,7 @@ export class Client {
      * @memberof Client
      */
     getAvailableAnimations(reload: boolean = false): Response {
-        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('animate');
+        const builder = new PacketBuilder(this.ip, this.port, this.target, this.protocol).addCommand('animate');
 
         if (reload) {
             builder.addParameter('reload');
@@ -107,7 +134,7 @@ export class Client {
      * @memberof Client
      */
     getAvailableSounds(reload: boolean = false): Response {
-        const builder = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('audio');
+        const builder = new PacketBuilder(this.ip, this.port, this.target, this.protocol).addCommand('audio');
 
         if (reload) {
             builder.addParameter('reload');
@@ -128,7 +155,7 @@ export class Client {
      * @memberof Client
      */
     getAvailableMotorRegisters(motorName: string, readableOnly: boolean = false): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName)
                     .addParameter('list')
@@ -148,7 +175,7 @@ export class Client {
      * @memberof Client
      */
     getMotorRegister(motorName: string, registerName: string): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
                     .build();
@@ -166,7 +193,7 @@ export class Client {
      * @memberof Client
      */
     getMotorRegisterRange(motorName: string, registerName: string): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('dxl')
                     .addArguments('get', motorName, registerName)
                     .addParameter('range')
@@ -186,7 +213,7 @@ export class Client {
      * @memberof Client
      */
     setMotorRegister(motorName: string, registerName: string, value: string): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('dxl')
                     .addArguments('set', motorName, registerName, value)
                     .build();
@@ -207,7 +234,7 @@ export class Client {
      * @memberof Client
      */
     moveMotorToPosition(motorName: string, position: number, velocity?: number, acceleration?: number, units: RotationUnits = 'radians'): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
                     .addKeyValuePair('velocity', velocity)
@@ -230,7 +257,7 @@ export class Client {
      * @memberof Client
      */
     moveMotorInTime(motorName: string, position: number, duration: number, units: RotationUnits = 'radians'): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, position)
                     .addKeyValuePair('duration', duration)
@@ -254,7 +281,7 @@ export class Client {
     moveMotorInDirection(motorName: string, direction: string, velocity?: number, units: RotationUnits = 'radians'): Response {
         // eslint-disable-next-line camelcase
         const direction_code = direction.toLowerCase() === 'right' ? 1 : direction.toLowerCase() === 'left' ? -1 : 0
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('move')
                     .addArguments(motorName, direction_code)
                     .addKeyValuePair('velocity', velocity)
@@ -280,7 +307,7 @@ export class Client {
      */
     // moveMotorInSteps(motorName: string, direction: string, steps: number, velocity?: number, interpolator?: string, units: RotationUnits = 'radians'): Response {
     //     const direction_code = direction.toLowerCase() == 'right' ? 1 : direction.toLowerCase() == 'left' ? -1 : 0
-    //     const packet = new PacketBuilder(this.ip, this.port, this.protocol).addCommand('move').addArguments(motorName, direction_code)
+    //     const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol).addCommand('move').addArguments(motorName, direction_code)
     //                 .addKeyValuePair('steps', steps)
     //                 .addKeyValuePair('velocity', velocity)
     //                 .addKeyValuePair('interpolator', interpolator)
@@ -313,7 +340,7 @@ export class Client {
      * @memberof Client
      */
      playAnimation(animationName: string, lenient: boolean = false, relative: boolean = false): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
                     .addKeyValuePair('lenient', lenient)
@@ -333,12 +360,12 @@ export class Client {
      */
     observeAnimation(animationName?: string): Response {
         const packet = animationName
-                    ? new PacketBuilder(this.ip, this.port, this.protocol)
+                    ? new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addArgument(animationName)
                     .addParameter('status')
                     .build()
-                    : new PacketBuilder(this.ip, this.port, this.protocol)
+                    : new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addParameter('status')
                     .build();
@@ -354,7 +381,7 @@ export class Client {
      * @memberof Client
      */
     pauseAnimation(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addParameter('pause')
                     .build();
@@ -370,7 +397,7 @@ export class Client {
      * @memberof Client
      */
     resumeAnimation(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addParameter('resume')
                     .build();
@@ -386,7 +413,7 @@ export class Client {
      * @memberof Client
      */
     stopAnimation(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addParameter('stop')
                     .build();
@@ -402,7 +429,7 @@ export class Client {
      * @memberof Client
      */
     clearAnimation(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('animate')
                     .addParameter('clear')
                     .build();
@@ -419,7 +446,7 @@ export class Client {
      * @memberof Client
      */
     playAudio(fileName: string): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('audio')
                     .addArgument(fileName)
                     .build();
@@ -437,12 +464,12 @@ export class Client {
     //  */
     // observeAudio(fileName?: string): Response {
     //     const packet = fileName
-    //                 ? new PacketBuilder(this.ip, this.port, this.protocol)
+    //                 ? new PacketBuilder(this.ip, this.port, this.target, this.protocol)
     //                 .addCommand('audio')
     //                 .addArgument(fileName)
     //                 .addParameter('status')
     //                 .build()
-    //                 : new PacketBuilder(this.ip, this.port, this.protocol)
+    //                 : new PacketBuilder(this.ip, this.port, this.target, this.protocol)
     //                 .addCommand('audio')
     //                 .addParameter('status')
     //                 .build();
@@ -458,7 +485,7 @@ export class Client {
      * @memberof Client
      */
     pauseAudio(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('audio')
                     .addParameter('pause')
                     .build();
@@ -474,7 +501,7 @@ export class Client {
      * @memberof Client
      */
     resumeAudio(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('audio')
                     .addParameter('resume')
                     .build();
@@ -490,7 +517,7 @@ export class Client {
      * @memberof Client
      */
     stopAudio(): Response {
-        const packet = new PacketBuilder(this.ip, this.port, this.protocol)
+        const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                     .addCommand('audio')
                     .addParameter('stop')
                     .build();

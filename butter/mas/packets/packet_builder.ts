@@ -7,8 +7,11 @@ import { PacketFactory } from './packet_factory';
  * @class PacketBuilder
  */
 export class PacketBuilder {
+    public static ANY_TARGET: string = '*';
+
     ip: string;
     port: number;
+    target: string;
     packet: any;
 
     cmd: string;
@@ -20,12 +23,14 @@ export class PacketBuilder {
      * Creates an instance of PacketBuilder.
      * @param {string} ip robot IP
      * @param {number} port robot port
+     * @param {string} target target robot character
      * @param {string} [protocol="http"] communication protocol
      * @memberof PacketBuilder
      */
-    constructor(ip: string, port: number, protocol: string = 'http') {
+    constructor(ip: string, port: number, target: string, protocol: string = 'http') {
         this.ip = ip;
         this.port = port;
+        this.target = target;
 
         const packetFactory = new PacketFactory();
         this.packet = packetFactory.getPacketClass(protocol);
@@ -185,7 +190,7 @@ export class PacketBuilder {
             query = `${query}${keys.join('&')}`;
         }
 
-        let uri = ['api', 'robots', 'any', 'command'].join('/');
+        let uri = ['api', 'robots', this.target, 'command'].join('/');
         uri = `${uri}/${query.replace(/&+$/, '')}`;
 
         // eslint-disable-next-line new-cap
