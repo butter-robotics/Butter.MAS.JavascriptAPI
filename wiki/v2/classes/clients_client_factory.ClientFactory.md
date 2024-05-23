@@ -31,7 +31,7 @@ Client factory for different types of protocols
 
 ### getClient
 
-▸ **getClient**(`ip`, `port?`, `protocol?`): [`HttpClient`](clients_client_http.HttpClient.md) \| [`TcpClient`](clients_client_tcp.TcpClient.md) \| [`UdpClient`](clients_client_udp.UdpClient.md)
+▸ **getClient**(`ip`, `port?`, `protocol?`): [`Client`](clients_client.Client.md)
 
 Creates new client
 
@@ -45,7 +45,7 @@ Creates new client
 
 #### Returns
 
-[`HttpClient`](clients_client_http.HttpClient.md) \| [`TcpClient`](clients_client_tcp.TcpClient.md) \| [`UdpClient`](clients_client_udp.UdpClient.md)
+[`Client`](clients_client.Client.md)
 
 requested client
 
@@ -55,7 +55,7 @@ ClientFactory
 
 #### Defined in
 
-[clients/client_factory.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client_factory.ts#L21)
+[clients/client_factory.ts:22](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client_factory.ts#L22)
 
 ___
 
@@ -81,4 +81,4 @@ ClientFactory
 
 #### Defined in
 
-[clients/client_factory.ts:43](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client_factory.ts#L43)
+[clients/client_factory.ts:44](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client_factory.ts#L44)

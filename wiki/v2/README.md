@@ -19,13 +19,13 @@ npm install @butter-robotics/mas-javascript-api
 ```typescript
 import { HttpClient } from '@butter-robotics/mas-javascript-api';
 
-const butterHttpClient = new HttpClient('192.168.0.111');  // use you robot ip here
+const butterHttpClient = new HttpClient('192.168.0.111');  // use your robot ip here
 
 butterHttpClient.playAnimation('jump').then(response => console.log(response.data));
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_javascript_api),
+- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_javascript_api)
 <!-- (https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/API.md), -->
 - 🖋  [Licence](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/LICENSE)
 <!-- - 👩🏼‍🏫 [Examples](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/master/docs/examples),   -->

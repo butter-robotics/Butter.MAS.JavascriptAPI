@@ -15,7 +15,7 @@
 
 #### Defined in
 
-[environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/environment.ts#L1)
+[environment.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/environment.ts#L1)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 #### Defined in
 
-[environment.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/environment.ts#L3)
+[environment.ts:3](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/environment.ts#L3)

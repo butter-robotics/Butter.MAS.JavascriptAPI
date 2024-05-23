@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[interfaces/response.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L32)
+[interfaces/response.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L32)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[interfaces/response.ts:28](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L28)
+[interfaces/response.ts:28](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L28)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[interfaces/response.ts:31](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L31)
+[interfaces/response.ts:31](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L31)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[interfaces/response.ts:33](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L33)
+[interfaces/response.ts:33](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L33)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[interfaces/response.ts:29](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L29)
+[interfaces/response.ts:29](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L29)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[interfaces/response.ts:30](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/response.ts#L30)
+[interfaces/response.ts:30](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/response.ts#L30)

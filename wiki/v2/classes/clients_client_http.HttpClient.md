@@ -26,10 +26,12 @@ Butter MAS HTTP client API
 
 ### Accessors
 
+- [target](clients_client_http.HttpClient.md#target)
 - [timeout](clients_client_http.HttpClient.md#timeout)
 
 ### Methods
 
+- [assertLinkQuality](clients_client_http.HttpClient.md#assertlinkquality)
 - [clearAnimation](clients_client_http.HttpClient.md#clearanimation)
 - [getAvailableAnimations](clients_client_http.HttpClient.md#getavailableanimations)
 - [getAvailableHandlers](clients_client_http.HttpClient.md#getavailablehandlers)
@@ -40,10 +42,12 @@ Butter MAS HTTP client API
 - [moveMotorInDirection](clients_client_http.HttpClient.md#movemotorindirection)
 - [moveMotorInTime](clients_client_http.HttpClient.md#movemotorintime)
 - [moveMotorToPosition](clients_client_http.HttpClient.md#movemotortoposition)
+- [observeAnimation](clients_client_http.HttpClient.md#observeanimation)
 - [pauseAnimation](clients_client_http.HttpClient.md#pauseanimation)
 - [pauseAudio](clients_client_http.HttpClient.md#pauseaudio)
 - [playAnimation](clients_client_http.HttpClient.md#playanimation)
 - [playAudio](clients_client_http.HttpClient.md#playaudio)
+- [playSequence](clients_client_http.HttpClient.md#playsequence)
 - [resumeAnimation](clients_client_http.HttpClient.md#resumeanimation)
 - [resumeAudio](clients_client_http.HttpClient.md#resumeaudio)
 - [setMotorRegister](clients_client_http.HttpClient.md#setmotorregister)
@@ -54,7 +58,7 @@ Butter MAS HTTP client API
 
 ### constructor
 
-• **new HttpClient**(`ip`, `port?`, `protocol?`): [`HttpClient`](clients_client_http.HttpClient.md)
+• **new HttpClient**(`ip`, `port?`): [`HttpClient`](clients_client_http.HttpClient.md)
 
 Creates an instance of HttpClient.
 
@@ -64,7 +68,6 @@ Creates an instance of HttpClient.
 | :------ | :------ | :------ |
 | `ip` | `string` | `undefined` |
 | `port?` | `number` | `3000` |
-| `protocol?` | `string` | `'http'` |
 
 #### Returns
 
@@ -80,7 +83,7 @@ HttpClient
 
 #### Defined in
 
-[clients/client_http.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client_http.ts#L17)
+[clients/client_http.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client_http.ts#L16)
 
 ## Properties
 
@@ -94,7 +97,7 @@ HttpClient
 
 #### Defined in
 
-[clients/client.ts:7](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L7)
+[clients/client.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L9)
 
 ___
 
@@ -108,7 +111,7 @@ ___
 
 #### Defined in
 
-[clients/client.ts:8](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L8)
+[clients/client.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L10)
 
 ___
 
@@ -122,9 +125,59 @@ ___
 
 #### Defined in
 
-[clients/client.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L9)
+[clients/client.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L11)
 
 ## Accessors
+
+### target
+
+• `get` **target**(): `string`
+
+Get robot character target
+
+#### Returns
+
+`string`
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+Client.target
+
+#### Defined in
+
+[clients/client.ts:59](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L59)
+
+• `set` **target**(`target`): `void`
+
+Set robot character target
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `target` | `string` | robot character target |
+
+#### Returns
+
+`void`
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+Client.target
+
+#### Defined in
+
+[clients/client.ts:69](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L69)
+
+___
 
 ### timeout
 
@@ -146,7 +199,7 @@ Client.timeout
 
 #### Defined in
 
-[clients/client.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L32)
+[clients/client.ts:36](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L36)
 
 • `set` **timeout**(`timeout`): `void`
 
@@ -172,9 +225,43 @@ Client.timeout
 
 #### Defined in
 
-[clients/client.ts:42](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L42)
+[clients/client.ts:46](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L46)
 
 ## Methods
+
+### assertLinkQuality
+
+▸ **assertLinkQuality**(`clientIp`): [`Response`](../interfaces/interfaces_response.Response.md)
+
+Validate robot connection and assert link quality
+This validation assets minimal lower bound link quality, and do not take worst case scenarios into account
+ICMP protocol is assumed to be supported and enabled on the machine network
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `clientIp` | `string` | this machine ip address |
+
+#### Returns
+
+[`Response`](../interfaces/interfaces_response.Response.md)
+
+Response whether this machine is reachable within the defined link parameter
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[assertLinkQuality](clients_client.Client.md#assertlinkquality)
+
+#### Defined in
+
+[clients/client.ts:86](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L86)
+
+___
 
 ### clearAnimation
 
@@ -198,7 +285,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:349](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L349)
+[clients/client.ts:431](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L431)
 
 ___
 
@@ -230,7 +317,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:70](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L70)
+[clients/client.ts:116](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L116)
 
 ___
 
@@ -256,7 +343,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:56](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L56)
+[clients/client.ts:102](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L102)
 
 ___
 
@@ -289,7 +376,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:111](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L111)
+[clients/client.ts:157](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L157)
 
 ___
 
@@ -321,7 +408,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:90](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L90)
+[clients/client.ts:136](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L136)
 
 ___
 
@@ -354,7 +441,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:131](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L131)
+[clients/client.ts:177](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L177)
 
 ___
 
@@ -387,7 +474,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:149](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L149)
+[clients/client.ts:195](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L195)
 
 ___
 
@@ -422,7 +509,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:235](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L235)
+[clients/client.ts:281](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L281)
 
 ___
 
@@ -457,7 +544,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:213](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L213)
+[clients/client.ts:259](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L259)
 
 ___
 
@@ -493,7 +580,39 @@ Client
 
 #### Defined in
 
-[clients/client.ts:190](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L190)
+[clients/client.ts:236](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L236)
+
+___
+
+### observeAnimation
+
+▸ **observeAnimation**(`animationName?`): [`Response`](../interfaces/interfaces_response.Response.md)
+
+observe animation status ['ANIMATING', 'QUEUED', 'STOPPED', 'PAUSED', 'IDLE']
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `animationName?` | `string` | (if non provided, will check global status) |
+
+#### Returns
+
+[`Response`](../interfaces/interfaces_response.Response.md)
+
+response containing execution result
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[observeAnimation](clients_client.Client.md#observeanimation)
+
+#### Defined in
+
+[clients/client.ts:361](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L361)
 
 ___
 
@@ -519,7 +638,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:301](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L301)
+[clients/client.ts:383](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L383)
 
 ___
 
@@ -545,7 +664,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:382](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L382)
+[clients/client.ts:487](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L487)
 
 ___
 
@@ -579,7 +698,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:283](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L283)
+[clients/client.ts:342](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L342)
 
 ___
 
@@ -611,7 +730,41 @@ Client
 
 #### Defined in
 
-[clients/client.ts:366](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L366)
+[clients/client.ts:448](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L448)
+
+___
+
+### playSequence
+
+▸ **playSequence**(`animationSequence`, `lenient?`, `relative?`): [`Response`](../interfaces/interfaces_response.Response.md)
+
+Play animation sequence on the robot
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `animationSequence` | `string`[] | `undefined` |  |
+| `lenient?` | `boolean` | `false` | wait for current playing animation (if present) to finish |
+| `relative?` | `boolean` | `false` | play animation relative to the current robot position |
+
+#### Returns
+
+[`Response`](../interfaces/interfaces_response.Response.md)
+
+response containing execution result
+
+**`Memberof`**
+
+Client
+
+#### Inherited from
+
+[Client](clients_client.Client.md).[playSequence](clients_client.Client.md#playsequence)
+
+#### Defined in
+
+[clients/client.ts:328](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L328)
 
 ___
 
@@ -637,7 +790,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:317](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L317)
+[clients/client.ts:399](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L399)
 
 ___
 
@@ -663,7 +816,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:398](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L398)
+[clients/client.ts:503](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L503)
 
 ___
 
@@ -697,7 +850,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:169](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L169)
+[clients/client.ts:215](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L215)
 
 ___
 
@@ -723,7 +876,7 @@ Client
 
 #### Defined in
 
-[clients/client.ts:333](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L333)
+[clients/client.ts:415](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L415)
 
 ___
 
@@ -749,4 +902,4 @@ Client
 
 #### Defined in
 
-[clients/client.ts:414](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/clients/client.ts#L414)
+[clients/client.ts:519](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/clients/client.ts#L519)

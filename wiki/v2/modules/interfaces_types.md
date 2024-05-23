@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[interfaces/types.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/interfaces/types.ts#L1)
+[interfaces/types.ts:1](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/interfaces/types.ts#L1)

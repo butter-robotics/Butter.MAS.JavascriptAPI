@@ -21,6 +21,8 @@ Builds a command packet using the builder design pattern
 - [packet](packets_packet_builder.PacketBuilder.md#packet)
 - [params](packets_packet_builder.PacketBuilder.md#params)
 - [port](packets_packet_builder.PacketBuilder.md#port)
+- [target](packets_packet_builder.PacketBuilder.md#target)
+- [ANY\_TARGET](packets_packet_builder.PacketBuilder.md#any_target)
 
 ### Methods
 
@@ -37,7 +39,7 @@ Builds a command packet using the builder design pattern
 
 ### constructor
 
-• **new PacketBuilder**(`ip`, `port`, `protocol?`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
+• **new PacketBuilder**(`ip`, `port`, `target`, `protocol?`): [`PacketBuilder`](packets_packet_builder.PacketBuilder.md)
 
 Creates an instance of PacketBuilder.
 
@@ -47,6 +49,7 @@ Creates an instance of PacketBuilder.
 | :------ | :------ | :------ | :------ |
 | `ip` | `string` | `undefined` | robot IP |
 | `port` | `number` | `undefined` | robot port |
+| `target` | `string` | `undefined` | target robot character |
 | `protocol?` | `string` | `'http'` | communication protocol |
 
 #### Returns
@@ -59,7 +62,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:26](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L26)
+[packets/packet_builder.ts:30](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L30)
 
 ## Properties
 
@@ -69,7 +72,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L15)
+[packets/packet_builder.ts:18](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L18)
 
 ___
 
@@ -79,7 +82,7 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L14)
+[packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L17)
 
 ___
 
@@ -89,7 +92,7 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L10)
+[packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L12)
 
 ___
 
@@ -99,7 +102,7 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:17](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L17)
+[packets/packet_builder.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L20)
 
 ___
 
@@ -109,7 +112,7 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:12](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L12)
+[packets/packet_builder.ts:15](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L15)
 
 ___
 
@@ -119,7 +122,7 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:16](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L16)
+[packets/packet_builder.ts:19](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L19)
 
 ___
 
@@ -129,7 +132,27 @@ ___
 
 #### Defined in
 
-[packets/packet_builder.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L11)
+[packets/packet_builder.ts:13](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L13)
+
+___
+
+### target
+
+• **target**: `string`
+
+#### Defined in
+
+[packets/packet_builder.ts:14](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L14)
+
+___
+
+### ANY\_TARGET
+
+▪ `Static` **ANY\_TARGET**: `string` = `'*'`
+
+#### Defined in
+
+[packets/packet_builder.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L10)
 
 ## Methods
 
@@ -157,7 +180,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:144](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L144)
+[packets/packet_builder.ts:149](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L149)
 
 ___
 
@@ -185,7 +208,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:61](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L61)
+[packets/packet_builder.ts:66](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L66)
 
 ___
 
@@ -213,7 +236,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:76](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L76)
+[packets/packet_builder.ts:81](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L81)
 
 ___
 
@@ -241,7 +264,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L47)
+[packets/packet_builder.ts:52](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L52)
 
 ___
 
@@ -270,7 +293,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:127](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L127)
+[packets/packet_builder.ts:132](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L132)
 
 ___
 
@@ -298,7 +321,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:94](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L94)
+[packets/packet_builder.ts:99](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L99)
 
 ___
 
@@ -326,7 +349,7 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:108](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L108)
+[packets/packet_builder.ts:113](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L113)
 
 ___
 
@@ -348,4 +371,4 @@ PacketBuilder
 
 #### Defined in
 
-[packets/packet_builder.ts:166](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_builder.ts#L166)
+[packets/packet_builder.ts:171](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_builder.ts#L171)

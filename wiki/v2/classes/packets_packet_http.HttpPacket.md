@@ -61,7 +61,7 @@ HttpPacket
 
 #### Defined in
 
-[packets/packet_http.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_http.ts#L20)
+[packets/packet_http.ts:20](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_http.ts#L20)
 
 ## Properties
 
@@ -75,7 +75,7 @@ HttpPacket
 
 #### Defined in
 
-[packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L9)
+[packets/packet.ts:9](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet.ts#L9)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[packets/packet.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L10)
+[packets/packet.ts:10](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet.ts#L10)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L11)
+[packets/packet.ts:11](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet.ts#L11)
 
 ## Methods
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[packets/packet_http.ts:45](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_http.ts#L45)
+[packets/packet_http.ts:45](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_http.ts#L45)
 
 ___
 
@@ -165,13 +165,15 @@ Packet
 
 #### Defined in
 
-[packets/packet.ts:74](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L74)
+[packets/packet.ts:73](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet.ts#L73)
 
 ___
 
 ### generateResponse
 
 ▸ **generateResponse**(`content`): [`Response`](../interfaces/interfaces_response.Response.md)
+
+Generates response packet
 
 #### Parameters
 
@@ -195,7 +197,7 @@ Packet
 
 #### Defined in
 
-[packets/packet.ts:47](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet.ts#L47)
+[packets/packet.ts:46](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet.ts#L46)
 
 ___
 
@@ -227,4 +229,4 @@ HttpPacket
 
 #### Defined in
 
-[packets/packet_http.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_http.ts#L32)
+[packets/packet_http.ts:32](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_http.ts#L32)

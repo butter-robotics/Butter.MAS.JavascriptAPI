@@ -56,7 +56,7 @@ PacketFactory
 
 #### Defined in
 
-[packets/packet_factory.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_factory.ts#L21)
+[packets/packet_factory.ts:21](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_factory.ts#L21)
 
 ___
 
@@ -76,10 +76,12 @@ Get packet class
 
 typeof [`HttpPacket`](packets_packet_http.HttpPacket.md)
 
+class of type Packet
+
 **`Memberof`**
 
 PacketFactory
 
 #### Defined in
 
-[packets/packet_factory.ts:43](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/0087c54/butter/mas/packets/packet_factory.ts#L43)
+[packets/packet_factory.ts:43](https://github.com/butter-robotics/Butter.MAS.JavascriptAPI/blob/86ab50c/butter/mas/packets/packet_factory.ts#L43)
