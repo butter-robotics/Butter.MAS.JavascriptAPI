@@ -7,6 +7,7 @@ export interface MetadataDataPacket {
 }
 
 export interface ResponseDataPacket {
+    id?: string,
     status: string,
     data: Array<ResponseDataPacket> | string,
     metadata?: MetadataDataPacket,

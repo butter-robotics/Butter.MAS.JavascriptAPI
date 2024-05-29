@@ -80,6 +80,7 @@ export abstract class Packet {
                     parameters: null
                 },
                 response: {
+                    id: '-1',
                     status: 'Failed',
                     data: null,
                     metadata: {
@@ -119,6 +120,7 @@ export abstract class Packet {
                         parameters: null
                     },
                     response: {
+                        id: '-1',
                         status: 'Failed',
                         data: null,
                         metadata: {
