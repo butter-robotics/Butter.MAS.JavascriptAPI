@@ -44,8 +44,8 @@ export class Client {
      * @memberof Client
      */
     set timeout(timeout: number) {
-        if (timeout < 20 || timeout > 500) {
-            throw new Error('Timeout most be an integer number in the range [20, 500]');
+        if (timeout < 20 || timeout > 2000) {
+            throw new Error('Timeout most be an integer number in the range [20, 2000]');
         }
 
         this._timeout = timeout;
