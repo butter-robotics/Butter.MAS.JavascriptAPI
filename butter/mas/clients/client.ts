@@ -86,7 +86,7 @@ export class Client {
     assertLinkQuality(clientIp: string): Response {
         const packet = new PacketBuilder(this.ip, this.port, this.target, this.protocol)
                 .addCommand('network')
-                .addParameter('ping')
+                .addArgument('ping')
                 .addKeyValuePair('ip', clientIp)
                 .addKeyValuePair('timeout', this._timeout)
                 .build();
